@@ -7,8 +7,9 @@ import numpy as np
 import math
 import logging
 from mne._fiff.constants import FIFF
-from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES
-from mne._fiff.constants import CHANNEL_LOC_ALIASES
+from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES
+
+
 
 logger = logging.getLogger(__name__)
 handler = logging.FileHandler('test.log')
@@ -112,23 +113,65 @@ def get_cardinal_chan_count(data_info):
                 count += 1
         return count
 
-all_montage = ['standard_1005', 'standard_1020', 'standard_alphabetic', 'standard_postfixed', 'standard_prefixed', 'standard_primed', 'biosemi16', 'biosemi32', 'biosemi64', 'biosemi128', 'biosemi160', 'biosemi256', 'easycap-M1', 'easycap-M10', 'easycap-M43', 'EGI_256', 'GSN-HydroCel-32', 'GSN-HydroCel-64_1.0', 'GSN-HydroCel-65_1.0', 'GSN-HydroCel-128', 'GSN-HydroCel-129', 'GSN-HydroCel-256', 'GSN-HydroCel-257', 'mgh60', 'mgh70', 'artinis-octamon', 'artinis-brite23', 'brainproducts-RNP-BA-128']
+def create_similarity_dict(data_chan_info):
+    """Initializes a similarity dict 
+    :param data_chan_info: mne.raw.info instance (info of your raw_data)
+    Returns
+    -------
+    dict
+    """      
+    for montage_name in MNE_DEFAULT_MONTAGES:
+        loc_similarity_dict = {}    
+        loc_similarity_dict[montage_name]['chan_names'] = dict(zip(list(data_chan_info.keys()), [''] * len(list(data_chan_info.keys()))))
+        loc_similarity_dict[montage_name]['chan_positions'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
+        loc_similarity_dict[montage_name]['chan_similartity'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
+        loc_similarity_dict[montage_name]['similarity_score'] = []
+        loc_similarity_dict[montage_name]['total_similarity_score'] = []
+
+    return loc_similarity_dict
+
+
+def similarity_pipeline(data_chan_info, montage_name, similarity_method="position"):
+    loc_similarity_dict = create_similarity_dict(data_chan_info) 
+
+    if similarity_method == "position":
+        pass
+    elif similarity_method == "channel_name":
+        name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict)
+    else:
+        logger.critical(f"Wrong similarity method {similarity_method}, please enter a valid method ''position'' or ''channel_name''")
+        raise ValueError("Wrong similarity method")
+    
+
+def name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
+    montage = mne.channels.make_standard_montage(montage_name)    
+    mchpos = montage._get_ch_pos()    
+    for ch_name, pos_val in data_chan_info.items():          
+        empty_pos = np.empty((3))
+        empty_pos.fill(np.nan)            
+        if ch_name in montage.ch_names:           
+            ch_reg = ch_name
+            ch_pos = mchpos[ch_name]            
+            similarity_score = check_position_similarity(mchpos[ch_name], pos_val)
+        else:
+            ch_reg = ch_name
+            ch_pos = empty_pos              
+            similarity_score = empty_pos
+
+        loc_similarity_dict[montage_name]['chan_names'] = ch_reg
+        loc_similarity_dict[montage_name]['chan_positions'] = ch_pos 
+        loc_similarity_dict[montage_name]['chan_similartity'] = similarity_score
+
+    loc_similarity_dict[montage_name]['similarity_score'] = []
+    loc_similarity_dict[montage_name]['total_similarity_score'] = []
+
 sample_file = fetch_sample_file('EEGLAB')
 raw_data = read_raw_data(sample_file)
 raw_data.load_data()
 raw_data.info = adjust_nonstd_chans(raw_data.info)
 raw_data.info = adjust_nonstd_chans_dig(raw_data.info)
 data_chan_info = get_chanlocs(raw_data.info)
-
-def estimate_montage_similarity(data_chan_info, montage_name):
-    chdict = {} 
-    mchpos = montage._get_ch_pos()    
-    chdict[montage_name] = {}
-    chdict[montage_name]['changed_names'] = dict(zip(list(data_chan_info.keys()), [''] * len(list(data_chan_info.keys()))))
-    chdict[montage_name]['changed_positions'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
-
-    
-
+a=0
 
 def main():
     # #of position difference & #of channel count difference
