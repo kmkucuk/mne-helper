@@ -142,7 +142,7 @@ def similarity_pipeline(data_chan_info, montage_name, similarity_method="positio
         logger.critical(f"Wrong similarity method {similarity_method}, please enter a valid method ''position'' or ''channel_name''")
         raise ValueError("Wrong similarity method")
     
-
+asd=0
 def name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
     montage = mne.channels.make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()    
