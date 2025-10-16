@@ -1,0 +1,49 @@
+main goals
+load multiple data formats seamlessly
+epoch data remove outlier epochs (probable artifacts)
+extract frequency power for all frequencies
+extract phase for all frequencies (inter-roi avg connectivity >.5 across all trials)
+
+
+
+10.10.2025
+	todo
+	load edf file
+	load eeglab (.set .fdt)
+
+
+12.10.2025
+done
+- wrapper function for loading different types of EEG data files
+- tests for data type specific file loadings
+- plot raw data 
+- change channel names of eeglab data (E1 to E129 into Fp1... etc.)
+
+todo
+	electrode montage automation
+	create function that checks # of channels and assigns proper standard montages using # chans there. 
+	show list of initial and changed channel names for inspection, at every chan name change
+	
+14.10.2025
+	some channels can be in data.ch_names but not in data._get_ch_positions(), a workaround is to get ch names and positions from dig directly. 
+	solved:	Used data.info['chs'] to extract chname and positions
+	
+	Need to think for weird/non-standard channels like A1-A2, EOG etc. We can mark these as non EEG (FIFF.FIFFV_MISC_CHAN etc.), then need to think on 
+	when to reference using A1s OR when/how to use EOG to get ICAs for eye blinks etc. 
+
+15.10.2025
+	Check positions, get best montage, 
+	write custom set_montage changes contents:
+		- data.info['chs']
+		- data.info['dig']
+		- data.info['ch_names']
+		- data.info._orig_units
+	Change type of NON_STANDARD_CHANNELS	
+	Check if non _POINT_ types are valid for "dig" channels: they are. 
+
+
+	mne.channels.get_builtin_montages()
+	mne.channels.make_standard_montage()
+	channel_mapping = dict(zip(raw_data.info.ch_names, montage.ch_names))
+	mne.channels.rename_channels(raw_data.info, channel_mapping)
+	
