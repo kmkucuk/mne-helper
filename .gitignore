@@ -80,3 +80,9 @@ venv.bak/
 /data/processed/*
 /data/external/*
 !data/**/.gitkeep
+
+# Logs
+/logs
+
+# Notes 
+/notes
