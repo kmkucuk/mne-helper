@@ -124,6 +124,8 @@ def create_similarity_dict(data_chan_info):
         loc_similarity_dict[montage_name]['chan_similarity'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
         loc_similarity_dict[montage_name]['similarity_score'] = []
         loc_similarity_dict[montage_name]['total_similarity_score'] = []
+        loc_similarity_dict[montage_name]['invalid'] = False
+        
 
     return loc_similarity_dict
 
@@ -161,56 +163,65 @@ def name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
 
     loc_similarity_dict[montage_name]['similarity_score'] = []
     loc_similarity_dict[montage_name]['total_similarity_score'] = []
-    loc_similarity_dict[montage_name]['viable'] = True
+    loc_similarity_dict[montage_name]['invalid'] = False
     return loc_similarity_dict
 
 def position_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
     montage = mne.channels.make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()        
     mchnames = list(mchpos.keys())
-    similarity_matrix = np.ones(shape=(len(data_chan_info), len()))
+    dchannames = list(data_chan_info.keys())
+    similarity_matrix = np.ones(shape=(len(data_chan_info), len(mchnames)))
     total_sim_score = np.zeros(shape=(len(data_chan_info), 1))
-    simi = 0
-    for ch_name, pos_val in data_chan_info.items():          
-        ch_sim_scores = np.zeros(shape=(len(mchpos), 1))
-        mchnames = list(mchpos.keys())
-        chi=0        
-        for mnt_ch_name, mpos_val in mchpos.items():
-            ch_sim_scores[chi] = check_pos_distance(mpos_val, pos_val)         
-            chi += 1
-        
-        best_chan_indx = np.argmin(ch_sim_scores)
-        best_chan_name = mchnames[best_chan_indx]        
-        same_min_distances = np.where(ch_sim_scores==ch_sim_scores[best_chan_indx])[0]
-        if len(same_min_distances) > 1:
-            print(f"There are more than one minimum values in similarity estimations {montage_name}, {ch_name}, {same_min_distances}, {mchnames[same_min_distances[0]], mchnames[same_min_distances[1]]}")
-            logger.error(f"There are more than one minimum values in similarity estimations {montage_name}, {ch_name}, {same_min_distances}, {mchnames[same_min_distances[0]], mchnames[same_min_distances[1]]}")        
-            loc_similarity_dict[montage_name]['viable'] = False
-        loc_similarity_dict[montage_name]['chan_names'][ch_name] = best_chan_name
-        loc_similarity_dict[montage_name]['chan_positions'][ch_name] = mchpos[best_chan_name] 
-        loc_similarity_dict[montage_name]['chan_similarity'][ch_name] = ch_sim_scores[best_chan_indx]        
-        total_sim_score[simi] = ch_sim_scores[best_chan_indx]
-        simi += 1
+    
+    for datai in range(0, len(data_chan_info)):
+        for montagei in range(0, len(mchnames)):
+            similarity_matrix[datai, montagei] = check_pos_distance(data_chan_info[dchannames[datai]], mchpos[mchnames[montagei]])         
 
-        # del mchpos[best_chan_name]
-        # if len(mchpos) == 0:
-        #     break
+    rows, cols = similarity_matrix.shape
+    for rowi in range(0, rows):
+        match_chan_indx = find_min_matrix(similarity_matrix, rowi)
+        if match_chan_indx == None:
+            loc_similarity_dict[montage_name]['invalid'] = True
+        else:
+            loc_similarity_dict[montage_name]['chan_names'][dchannames[rowi]] = mchnames[match_chan_indx]
+            loc_similarity_dict[montage_name]['chan_positions'][dchannames[rowi]] = mchpos[mchnames[match_chan_indx]] 
+            loc_similarity_dict[montage_name]['chan_similarity'][dchannames[rowi]] = similarity_matrix[rowi, match_chan_indx]     
+            total_sim_score[rowi] = similarity_matrix[rowi, match_chan_indx]
 
-    loc_similarity_dict[montage_name]['similarity_score'] = np.mean(total_sim_score) * 1000
+    if loc_similarity_dict[montage_name]['invalid']:
+        loc_similarity_dict[montage_name]['similarity_score'] = np.mean(total_sim_score) * 1000
+    else:
+        loc_similarity_dict[montage_name]['similarity_score'] = "INVALID"
     print(f"Similarity score of {montage_name}: {loc_similarity_dict[montage_name]['similarity_score']}")
     return loc_similarity_dict
 
-def resolve_duplicates(similarity_dict_montage, montage):
+
+def find_min_matrix(matrix, start_row=0): 
+    min_col = np.argmin(matrix[start_row, :])
+    same_min_cols = np.where(matrix[start_row, :]==matrix[start_row, min_col])[0]
+    if len(same_min_cols) > 1:
+        logger.error("More than one montage channels have the same similarity for this data channel")
+        return None
+    else:
+        min_row = np.argmin(matrix[:, min_col])
+        same_min_rows = np.where(matrix[:, min_col]==matrix[min_row, min_col])[0]
+        if len(same_min_rows) > 1:
+            logger.error("More than data channels have the same similarity for this montage channel")
+            return None
+        else:                                    
+            if start_row == min_row:
+                return min_col
+                
+    
+
+def resolve_duplicates(similarity_dict_montage):
     vec = []
     for key, val in similarity_dict_montage['chan_names'].items(): 
         vec.append(val)
-    duplicates = find_duplicates(vec)
+    return find_duplicates(vec)
 
-    if len(duplicates) > 0:
-        similarity_dict_montage
-    else:
-        
-        pass
+
 def find_duplicates(array):
     # Initialize an empty set to store seen elements
     s = set()
