@@ -38,26 +38,21 @@ def check_position_match(montage_pos, data_pos) -> bool:
                      break
         return position_match
     
-def check_position_similarity(montage_pos, data_pos, std_out=False) -> list:        
+def check_pos_distance(montage_pos, data_pos) -> float:        
     """Get similarity ratios between montage electrode positions and data positions.
 
     Returns
     -------
-    list or ndarray: standardized or direct ratio of difference in position values    
+    float: distance between two vectors
     """
-    empty_pos = np.empty((3))
     if any(np.isnan(data_pos)):
         logger.warning(f'Channel position coordinates include a NAN value {data_pos}')    
-        return empty_pos.fill(np.nan)
+        return np.nan
     elif isinstance(data_pos, np.ndarray or list) and isinstance(montage_pos, np.ndarray or list):        
-        if std_out:
-             divisor = 2
-        else:
-             divisor = data_pos
-        return np.absolute(np.divide(np.subtract(data_pos, montage_pos), divisor))
+        return np.linalg.norm(data_pos - montage_pos)
     else:
         logger.error(f"Position types are not fit for similartiy estimation: data-type {type(data_pos)}, montage-type {type(montage_pos)}")
-        return empty_pos.fill(np.nan)
+        return np.nan
     
 
 def get_chanlocs(data_info):    
@@ -119,30 +114,32 @@ def create_similarity_dict(data_chan_info):
     Returns
     -------
     dict
-    """      
+    """ 
+    loc_similarity_dict = {}      
     for montage_name in MNE_DEFAULT_MONTAGES:
-        loc_similarity_dict = {}    
+           
+        loc_similarity_dict[montage_name] = {}
         loc_similarity_dict[montage_name]['chan_names'] = dict(zip(list(data_chan_info.keys()), [''] * len(list(data_chan_info.keys()))))
         loc_similarity_dict[montage_name]['chan_positions'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
-        loc_similarity_dict[montage_name]['chan_similartity'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
+        loc_similarity_dict[montage_name]['chan_similarity'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
         loc_similarity_dict[montage_name]['similarity_score'] = []
         loc_similarity_dict[montage_name]['total_similarity_score'] = []
 
     return loc_similarity_dict
 
 
-def similarity_pipeline(data_chan_info, montage_name, similarity_method="position"):
+def similarity_pipeline(data_chan_info, similarity_method="position"):
     loc_similarity_dict = create_similarity_dict(data_chan_info) 
-
-    if similarity_method == "position":
-        pass
-    elif similarity_method == "channel_name":
-        name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict)
-    else:
-        logger.critical(f"Wrong similarity method {similarity_method}, please enter a valid method ''position'' or ''channel_name''")
-        raise ValueError("Wrong similarity method")
+    for montage_name in MNE_DEFAULT_MONTAGES:
+        if similarity_method == "position":
+            loc_similarity_dict = position_matching_similarity(data_chan_info, montage_name, loc_similarity_dict)
+        elif similarity_method == "channel_name":
+            loc_similarity_dict = name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict)
+        else:
+            logger.critical(f"Wrong similarity method {similarity_method}, please enter a valid method ''position'' or ''channel_name''")
+            raise ValueError("Wrong similarity method")
+    return loc_similarity_dict
     
-asd=0
 def name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
     montage = mne.channels.make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()    
@@ -152,64 +149,96 @@ def name_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
         if ch_name in montage.ch_names:           
             ch_reg = ch_name
             ch_pos = mchpos[ch_name]            
-            similarity_score = check_position_similarity(mchpos[ch_name], pos_val)
+            similarity_score = check_pos_distance(mchpos[ch_name], pos_val)
         else:
             ch_reg = ch_name
             ch_pos = empty_pos              
             similarity_score = empty_pos
 
-        loc_similarity_dict[montage_name]['chan_names'] = ch_reg
-        loc_similarity_dict[montage_name]['chan_positions'] = ch_pos 
-        loc_similarity_dict[montage_name]['chan_similartity'] = similarity_score
+        loc_similarity_dict[montage_name]['chan_names'][ch_name] = ch_reg
+        loc_similarity_dict[montage_name]['chan_positions'][ch_name] = ch_pos 
+        loc_similarity_dict[montage_name]['chan_similarity'][ch_name] = similarity_score
 
     loc_similarity_dict[montage_name]['similarity_score'] = []
     loc_similarity_dict[montage_name]['total_similarity_score'] = []
+    loc_similarity_dict[montage_name]['viable'] = True
+    return loc_similarity_dict
 
-sample_file = fetch_sample_file('EEGLAB')
+def position_matching_similarity(data_chan_info, montage_name, loc_similarity_dict):
+    montage = mne.channels.make_standard_montage(montage_name)    
+    mchpos = montage._get_ch_pos()        
+    mchnames = list(mchpos.keys())
+    similarity_matrix = np.ones(shape=(len(data_chan_info), len()))
+    total_sim_score = np.zeros(shape=(len(data_chan_info), 1))
+    simi = 0
+    for ch_name, pos_val in data_chan_info.items():          
+        ch_sim_scores = np.zeros(shape=(len(mchpos), 1))
+        mchnames = list(mchpos.keys())
+        chi=0        
+        for mnt_ch_name, mpos_val in mchpos.items():
+            ch_sim_scores[chi] = check_pos_distance(mpos_val, pos_val)         
+            chi += 1
+        
+        best_chan_indx = np.argmin(ch_sim_scores)
+        best_chan_name = mchnames[best_chan_indx]        
+        same_min_distances = np.where(ch_sim_scores==ch_sim_scores[best_chan_indx])[0]
+        if len(same_min_distances) > 1:
+            print(f"There are more than one minimum values in similarity estimations {montage_name}, {ch_name}, {same_min_distances}, {mchnames[same_min_distances[0]], mchnames[same_min_distances[1]]}")
+            logger.error(f"There are more than one minimum values in similarity estimations {montage_name}, {ch_name}, {same_min_distances}, {mchnames[same_min_distances[0]], mchnames[same_min_distances[1]]}")        
+            loc_similarity_dict[montage_name]['viable'] = False
+        loc_similarity_dict[montage_name]['chan_names'][ch_name] = best_chan_name
+        loc_similarity_dict[montage_name]['chan_positions'][ch_name] = mchpos[best_chan_name] 
+        loc_similarity_dict[montage_name]['chan_similarity'][ch_name] = ch_sim_scores[best_chan_indx]        
+        total_sim_score[simi] = ch_sim_scores[best_chan_indx]
+        simi += 1
+
+        # del mchpos[best_chan_name]
+        # if len(mchpos) == 0:
+        #     break
+
+    loc_similarity_dict[montage_name]['similarity_score'] = np.mean(total_sim_score) * 1000
+    print(f"Similarity score of {montage_name}: {loc_similarity_dict[montage_name]['similarity_score']}")
+    return loc_similarity_dict
+
+def resolve_duplicates(similarity_dict_montage, montage):
+    vec = []
+    for key, val in similarity_dict_montage['chan_names'].items(): 
+        vec.append(val)
+    duplicates = find_duplicates(vec)
+
+    if len(duplicates) > 0:
+        similarity_dict_montage
+    else:
+        
+        pass
+def find_duplicates(array):
+    # Initialize an empty set to store seen elements
+    s = set()
+
+    # List to store duplicates
+    dup = []
+
+    for n in array:
+        if n in s:
+            dup.append(n)
+        else:
+            s.add(n)
+
+    return dup
+
+sample_file = fetch_sample_file('BRAINVISION')
+montage = mne.channels.make_standard_montage('biosemi32')    
 raw_data = read_raw_data(sample_file)
 raw_data.load_data()
 raw_data.info = adjust_nonstd_chans(raw_data.info)
 raw_data.info = adjust_nonstd_chans_dig(raw_data.info)
 data_chan_info = get_chanlocs(raw_data.info)
+similarity_dict = similarity_pipeline(data_chan_info, similarity_method='position')
 a=0
-
-def main():
-    # #of position difference & #of channel count difference
-    chdict = {}
-    for mname in all_montage:
-        montage = mne.channels.make_standard_montage(mname)
-        
-        mchpos = montage._get_ch_pos()    
-        chdict[mname] = {}
-        chdict[mname]['changed_names'] = dict(zip(list(data_chan_info.keys()), [''] * len(list(data_chan_info.keys()))))
-        chdict[mname]['changed_positions'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys()))))            
-        pos_difference = 0
-        for ch_name, pos_val in data_chan_info.items():               
-                position_match = False
-                if ch_name in montage.ch_names:                    
-                    chdict[mname]['changed_names'][ch_name] = ch_name
-                    position_match = check_position_match(mchpos[ch_name], pos_val)
-                    if position_match:                        
-                        chdict[mname]['changed_positions'][ch_name] = mchpos[ch_name]     
-                    else:
-                        chdict[mname]['changed_positions'][ch_name] = {"error": f"Positions did not match data: {pos_val}, montage: {mchpos[ch_name]}"}     
-                        pos_difference += 1
-                else:
-                    for mchname, mposi in mchpos.items():
-                        position_match = check_position_match(mposi, pos_val)                      
-                        if position_match:
-                            chdict[mname]['changed_names'][ch_name] = mchname
-                            chdict[mname]['changed_positions'][ch_name] = mposi
-                            break
-                    if not position_match:
-                            pos_difference +=1
-                            chdict[mname]['changed_positions'][ch_name] = {"error": f"No matching positions were found {pos_val}"}     
-        chdict[mname]["position_difference"] = pos_difference
-
-
 
 raw_data.rename_channels(chdict['biosemi32']['changed_names'])
 raw_data.set_montage('biosemi32')
 raw_data.plot(block=True)
 a=0
 
+#

@@ -1,0 +1,620 @@
+2025-10-16 18:57:15,088 - __main__ - CRITICAL - Wrong similarity method channel_position, please enter a valid method ''position'' or ''channel_name''
+2025-10-16 19:23:18,064 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E45, [ 37 335]
+2025-10-16 19:23:18,277 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E108, [ 45 337]
+2025-10-16 19:23:18,412 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E45, [37 86]
+2025-10-16 19:23:18,425 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E58, [59 87]
+2025-10-16 19:23:18,463 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E96, [67 89]
+2025-10-16 19:23:18,479 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E108, [45 88]
+2025-10-16 19:23:18,631 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E6, [25 35]
+2025-10-16 19:23:18,633 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E7, [25 35]
+2025-10-16 19:23:18,639 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E13, [24 34]
+2025-10-16 19:23:18,674 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E29, [23 33]
+2025-10-16 19:23:18,676 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E30, [24 34]
+2025-10-16 19:23:18,680 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E34, [22 32]
+2025-10-16 19:23:18,681 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E35, [23 33]
+2025-10-16 19:23:18,686 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E39, [21 31]
+2025-10-16 19:23:18,698 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E47, [51 60]
+2025-10-16 19:23:18,700 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E50, [50 59]
+2025-10-16 19:23:18,701 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E51, [51 60]
+2025-10-16 19:23:18,702 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E52, [52 61]
+2025-10-16 19:23:18,705 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E53, [52 61]
+2025-10-16 19:23:18,706 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E54, [53 62]
+2025-10-16 19:23:18,709 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E57, [50 59]
+2025-10-16 19:23:18,713 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E61, [53 62]
+2025-10-16 19:23:18,730 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E78, [55 64]
+2025-10-16 19:23:18,731 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E79, [55 64]
+2025-10-16 19:23:18,737 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E86, [55 64]
+2025-10-16 19:23:18,743 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E92, [56 65]
+2025-10-16 19:23:18,754 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E97, [57 66]
+2025-10-16 19:23:18,755 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E98, [57 66]
+2025-10-16 19:23:18,759 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E100, [58 67]
+2025-10-16 19:23:18,760 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E101, [58 67]
+2025-10-16 19:23:18,767 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E105, [26 36]
+2025-10-16 19:23:18,768 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E106, [25 35]
+2025-10-16 19:23:18,773 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E110, [27 37]
+2025-10-16 19:23:18,774 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E111, [27 37]
+2025-10-16 19:23:18,776 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E112, [26 36]
+2025-10-16 19:23:18,778 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E115, [29 39]
+2025-10-16 19:23:18,779 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E116, [28 38]
+2025-10-16 19:23:18,806 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E1, [3 7]
+2025-10-16 19:23:18,807 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E2, [3 7]
+2025-10-16 19:23:18,904 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E126, [3 7]
+2025-10-16 19:23:18,918 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E6, [25 35]
+2025-10-16 19:23:18,919 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E7, [25 35]
+2025-10-16 19:23:18,925 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E13, [24 34]
+2025-10-16 19:23:18,942 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E29, [23 33]
+2025-10-16 19:23:18,943 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E30, [24 34]
+2025-10-16 19:23:18,946 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E34, [22 32]
+2025-10-16 19:23:18,947 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E35, [23 33]
+2025-10-16 19:23:18,952 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E39, [21 31]
+2025-10-16 19:23:18,959 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E47, [51 60]
+2025-10-16 19:23:18,962 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E50, [50 59]
+2025-10-16 19:23:18,964 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E51, [51 60]
+2025-10-16 19:23:18,967 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E52, [52 61]
+2025-10-16 19:23:18,968 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E53, [52 61]
+2025-10-16 19:23:18,971 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E54, [53 62]
+2025-10-16 19:23:18,978 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E57, [50 59]
+2025-10-16 19:23:18,987 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E61, [53 62]
+2025-10-16 19:23:19,029 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E78, [55 64]
+2025-10-16 19:23:19,031 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E79, [55 64]
+2025-10-16 19:23:19,041 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E86, [55 64]
+2025-10-16 19:23:19,047 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E92, [56 65]
+2025-10-16 19:23:19,051 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E97, [57 66]
+2025-10-16 19:23:19,052 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E98, [57 66]
+2025-10-16 19:23:19,054 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E100, [58 67]
+2025-10-16 19:23:19,055 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E101, [58 67]
+2025-10-16 19:23:19,060 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E105, [26 36]
+2025-10-16 19:23:19,061 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E106, [25 35]
+2025-10-16 19:23:19,065 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E110, [27 37]
+2025-10-16 19:23:19,066 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E111, [27 37]
+2025-10-16 19:23:19,067 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E112, [26 36]
+2025-10-16 19:23:19,069 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E115, [29 39]
+2025-10-16 19:23:19,070 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E116, [28 38]
+2025-10-16 19:23:19,086 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E15, [0 1]
+2025-10-16 19:23:19,086 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E17, [0 1]
+2025-10-16 19:23:19,116 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E15, [ 0 29]
+2025-10-16 19:23:19,116 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E16, [ 1 28]
+2025-10-16 19:23:19,117 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E17, [ 0 29]
+2025-10-16 19:23:19,671 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, E6, [147 148]
+2025-10-16 19:23:20,191 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E11, [17 29]
+2025-10-16 19:23:20,195 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E16, [17 29]
+2025-10-16 19:23:20,782 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-64_1.0, E17, [4 9]
+2025-10-16 19:23:20,874 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-65_1.0, E17, [4 9]
+2025-10-16 19:23:21,102 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105]
+2025-10-16 19:23:21,599 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-256, Cz, [  8 185]
+2025-10-16 19:23:22,197 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E11, [ 97 126]
+2025-10-16 19:23:22,202 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E15, [ 96 127]
+2025-10-16 19:24:21,162 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E45, [ 37 335]
+2025-10-16 19:24:21,375 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E108, [ 45 337]
+2025-10-16 19:24:21,506 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E45, [37 86]
+2025-10-16 19:24:21,520 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E58, [59 87]
+2025-10-16 19:24:21,562 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E96, [67 89]
+2025-10-16 19:24:21,574 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E108, [45 88]
+2025-10-16 19:24:21,728 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E6, [25 35]
+2025-10-16 19:24:21,730 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E7, [25 35]
+2025-10-16 19:24:21,736 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E13, [24 34]
+2025-10-16 19:24:21,752 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E29, [23 33]
+2025-10-16 19:24:21,754 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E30, [24 34]
+2025-10-16 19:24:21,758 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E34, [22 32]
+2025-10-16 19:24:21,759 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E35, [23 33]
+2025-10-16 19:24:21,763 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E39, [21 31]
+2025-10-16 19:24:21,771 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E47, [51 60]
+2025-10-16 19:24:21,774 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E50, [50 59]
+2025-10-16 19:24:21,776 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E51, [51 60]
+2025-10-16 19:24:21,777 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E52, [52 61]
+2025-10-16 19:24:21,778 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E53, [52 61]
+2025-10-16 19:24:21,779 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E54, [53 62]
+2025-10-16 19:24:21,782 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E57, [50 59]
+2025-10-16 19:24:21,785 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E61, [53 62]
+2025-10-16 19:24:21,802 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E78, [55 64]
+2025-10-16 19:24:21,803 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E79, [55 64]
+2025-10-16 19:24:21,809 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E86, [55 64]
+2025-10-16 19:24:21,816 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E92, [56 65]
+2025-10-16 19:24:21,820 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E97, [57 66]
+2025-10-16 19:24:21,822 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E98, [57 66]
+2025-10-16 19:24:21,824 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E100, [58 67]
+2025-10-16 19:24:21,825 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E101, [58 67]
+2025-10-16 19:24:21,829 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E105, [26 36]
+2025-10-16 19:24:21,830 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E106, [25 35]
+2025-10-16 19:24:21,834 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E110, [27 37]
+2025-10-16 19:24:21,835 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E111, [27 37]
+2025-10-16 19:24:21,837 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E112, [26 36]
+2025-10-16 19:24:21,840 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E115, [29 39]
+2025-10-16 19:24:21,841 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E116, [28 38]
+2025-10-16 19:24:21,855 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E1, [3 7]
+2025-10-16 19:24:21,856 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E2, [3 7]
+2025-10-16 19:24:21,940 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E126, [3 7]
+2025-10-16 19:24:21,951 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E6, [25 35]
+2025-10-16 19:24:21,952 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E7, [25 35]
+2025-10-16 19:24:21,959 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E13, [24 34]
+2025-10-16 19:24:21,974 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E29, [23 33]
+2025-10-16 19:24:21,976 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E30, [24 34]
+2025-10-16 19:24:21,980 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E34, [22 32]
+2025-10-16 19:24:21,981 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E35, [23 33]
+2025-10-16 19:24:21,985 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E39, [21 31]
+2025-10-16 19:24:21,993 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E47, [51 60]
+2025-10-16 19:24:21,996 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E50, [50 59]
+2025-10-16 19:24:21,997 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E51, [51 60]
+2025-10-16 19:24:21,999 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E52, [52 61]
+2025-10-16 19:24:22,000 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E53, [52 61]
+2025-10-16 19:24:22,001 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E54, [53 62]
+2025-10-16 19:24:22,005 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E57, [50 59]
+2025-10-16 19:24:22,008 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E61, [53 62]
+2025-10-16 19:24:22,024 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E78, [55 64]
+2025-10-16 19:24:22,026 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E79, [55 64]
+2025-10-16 19:24:22,034 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E86, [55 64]
+2025-10-16 19:24:22,041 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E92, [56 65]
+2025-10-16 19:24:22,047 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E97, [57 66]
+2025-10-16 19:24:22,050 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E98, [57 66]
+2025-10-16 19:24:22,052 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E100, [58 67]
+2025-10-16 19:24:22,054 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E101, [58 67]
+2025-10-16 19:24:22,064 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E105, [26 36]
+2025-10-16 19:24:22,065 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E106, [25 35]
+2025-10-16 19:24:22,069 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E110, [27 37]
+2025-10-16 19:24:22,071 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E111, [27 37]
+2025-10-16 19:24:22,072 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E112, [26 36]
+2025-10-16 19:24:22,075 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E115, [29 39]
+2025-10-16 19:24:22,076 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E116, [28 38]
+2025-10-16 19:24:22,091 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E15, [0 1]
+2025-10-16 19:24:22,092 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E17, [0 1]
+2025-10-16 19:24:22,116 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E15, [ 0 29]
+2025-10-16 19:24:22,117 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E16, [ 1 28]
+2025-10-16 19:24:22,118 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E17, [ 0 29]
+2025-10-16 19:24:22,677 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, E6, [147 148]
+2025-10-16 19:24:23,153 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E11, [17 29]
+2025-10-16 19:24:23,156 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E16, [17 29]
+2025-10-16 19:24:23,715 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-64_1.0, E17, [4 9]
+2025-10-16 19:24:23,820 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-65_1.0, E17, [4 9]
+2025-10-16 19:24:24,135 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105]
+2025-10-16 19:24:24,698 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-256, Cz, [  8 185]
+2025-10-16 19:24:25,350 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E11, [ 97 126]
+2025-10-16 19:24:25,369 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E15, [ 96 127]
+2025-10-16 19:30:49,049 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E45, [ 37 335], ('T7', 'T3')
+2025-10-16 19:30:49,366 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E108, [ 45 337], ('T8', 'T4')
+2025-10-16 19:30:49,509 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E45, [37 86], ('T7', 'T3')
+2025-10-16 19:30:49,521 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E58, [59 87], ('P7', 'T5')
+2025-10-16 19:30:49,554 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E96, [67 89], ('P8', 'T6')
+2025-10-16 19:30:49,565 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E108, [45 88], ('T8', 'T4')
+2025-10-16 19:30:49,688 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E6, [25 35], ('Fzp', 'Cza')
+2025-10-16 19:30:49,690 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E7, [25 35], ('Fzp', 'Cza')
+2025-10-16 19:30:49,697 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E13, [24 34], ('F1p', 'C1a')
+2025-10-16 19:30:49,725 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E29, [23 33], ('F3p', 'C3a')
+2025-10-16 19:30:49,727 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E30, [24 34], ('F1p', 'C1a')
+2025-10-16 19:30:49,735 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E34, [22 32], ('F5p', 'C5a')
+2025-10-16 19:30:49,736 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E35, [23 33], ('F3p', 'C3a')
+2025-10-16 19:30:49,740 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E39, [21 31], ('F7p', 'T3a')
+2025-10-16 19:30:49,749 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E47, [51 60], ('C5p', 'P5a')
+2025-10-16 19:30:49,753 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E50, [50 59], ('T3p', 'T5a')
+2025-10-16 19:30:49,755 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E51, [51 60], ('C5p', 'P5a')
+2025-10-16 19:30:49,757 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E52, [52 61], ('C3p', 'P3a')
+2025-10-16 19:30:49,758 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E53, [52 61], ('C3p', 'P3a')
+2025-10-16 19:30:49,759 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E54, [53 62], ('C1p', 'P1a')
+2025-10-16 19:30:49,763 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E57, [50 59], ('T3p', 'T5a')
+2025-10-16 19:30:49,767 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E61, [53 62], ('C1p', 'P1a')
+2025-10-16 19:30:49,788 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E78, [55 64], ('C2p', 'P2a')
+2025-10-16 19:30:49,789 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E79, [55 64], ('C2p', 'P2a')
+2025-10-16 19:30:49,796 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E86, [55 64], ('C2p', 'P2a')
+2025-10-16 19:30:49,802 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E92, [56 65], ('C4p', 'P4a')
+2025-10-16 19:30:49,810 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E97, [57 66], ('C6p', 'P6a')
+2025-10-16 19:30:49,811 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E98, [57 66], ('C6p', 'P6a')
+2025-10-16 19:30:49,813 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E100, [58 67], ('T4p', 'T6a')
+2025-10-16 19:30:49,815 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E101, [58 67], ('T4p', 'T6a')
+2025-10-16 19:30:49,819 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E105, [26 36], ('F2p', 'C2a')
+2025-10-16 19:30:49,820 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E106, [25 35], ('Fzp', 'Cza')
+2025-10-16 19:30:49,825 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E110, [27 37], ('F4p', 'C4a')
+2025-10-16 19:30:49,826 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E111, [27 37], ('F4p', 'C4a')
+2025-10-16 19:30:49,827 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E112, [26 36], ('F2p', 'C2a')
+2025-10-16 19:30:49,830 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E115, [29 39], ('F8p', 'T4a')
+2025-10-16 19:30:49,831 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E116, [28 38], ('F6p', 'C6a')
+2025-10-16 19:30:49,846 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E1, [3 7], ('aF3', 'aF4')
+2025-10-16 19:30:49,847 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E2, [3 7], ('aF3', 'aF4')
+2025-10-16 19:30:49,949 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E126, [3 7], ('aF3', 'aF4')
+2025-10-16 19:30:49,966 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E6, [25 35], ("Fz''", "Cz'")
+2025-10-16 19:30:49,967 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E7, [25 35], ("Fz''", "Cz'")
+2025-10-16 19:30:49,973 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E13, [24 34], ("F1''", "C1'")
+2025-10-16 19:30:49,992 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E29, [23 33], ("F3''", "C3'")
+2025-10-16 19:30:49,994 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E30, [24 34], ("F1''", "C1'")
+2025-10-16 19:30:49,998 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E34, [22 32], ("F5''", "C5'")
+2025-10-16 19:30:49,999 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E35, [23 33], ("F3''", "C3'")
+2025-10-16 19:30:50,003 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E39, [21 31], ("F7''", "T3'")
+2025-10-16 19:30:50,011 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E47, [51 60], ("C5''", "P5'")
+2025-10-16 19:30:50,014 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E50, [50 59], ("T3''", "T5'")
+2025-10-16 19:30:50,015 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E51, [51 60], ("C5''", "P5'")
+2025-10-16 19:30:50,016 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E52, [52 61], ("C3''", "P3'")
+2025-10-16 19:30:50,017 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E53, [52 61], ("C3''", "P3'")
+2025-10-16 19:30:50,018 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E54, [53 62], ("C1''", "P1'")
+2025-10-16 19:30:50,021 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E57, [50 59], ("T3''", "T5'")
+2025-10-16 19:30:50,025 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E61, [53 62], ("C1''", "P1'")
+2025-10-16 19:30:50,042 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E78, [55 64], ("C2''", "P2'")
+2025-10-16 19:30:50,043 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E79, [55 64], ("C2''", "P2'")
+2025-10-16 19:30:50,050 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E86, [55 64], ("C2''", "P2'")
+2025-10-16 19:30:50,056 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E92, [56 65], ("C4''", "P4'")
+2025-10-16 19:30:50,061 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E97, [57 66], ("C6''", "P6'")
+2025-10-16 19:30:50,063 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E98, [57 66], ("C6''", "P6'")
+2025-10-16 19:30:50,068 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E100, [58 67], ("T4''", "T6'")
+2025-10-16 19:30:50,070 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E101, [58 67], ("T4''", "T6'")
+2025-10-16 19:30:50,074 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E105, [26 36], ("F2''", "C2'")
+2025-10-16 19:30:50,075 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E106, [25 35], ("Fz''", "Cz'")
+2025-10-16 19:30:50,079 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E110, [27 37], ("F4''", "C4'")
+2025-10-16 19:30:50,080 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E111, [27 37], ("F4''", "C4'")
+2025-10-16 19:30:50,082 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E112, [26 36], ("F2''", "C2'")
+2025-10-16 19:30:50,085 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E115, [29 39], ("F8''", "T4'")
+2025-10-16 19:30:50,087 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E116, [28 38], ("F6''", "C6'")
+2025-10-16 19:30:50,103 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E15, [0 1], ('Fp1', 'Fp2')
+2025-10-16 19:30:50,103 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E17, [0 1], ('Fp1', 'Fp2')
+2025-10-16 19:30:50,125 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E15, [ 0 29], ('Fp1', 'Fp2')
+2025-10-16 19:30:50,126 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E16, [ 1 28], ('AF3', 'AF4')
+2025-10-16 19:30:50,126 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E17, [ 0 29], ('Fp1', 'Fp2')
+2025-10-16 19:30:50,710 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, E6, [147 148], ('E20', 'E21')
+2025-10-16 19:30:51,267 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E11, [17 29], ('18', '30')
+2025-10-16 19:30:51,271 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E16, [17 29], ('18', '30')
+2025-10-16 19:30:51,838 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-64_1.0, E17, [4 9], ('E5', 'E10')
+2025-10-16 19:30:51,929 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-65_1.0, E17, [4 9], ('E5', 'E10')
+2025-10-16 19:30:52,233 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-16 19:30:52,802 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-256, Cz, [  8 185], ('E9', 'E186')
+2025-10-16 19:30:53,369 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E11, [ 97 126], ('AFF1h', 'AFF2h')
+2025-10-16 19:30:53,374 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E15, [ 96 127], ('AFp1', 'AFp2')
+2025-10-17 15:01:58,646 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E45, [ 37 335], ('T7', 'T3')
+2025-10-17 15:01:58,827 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, E108, [ 45 337], ('T8', 'T4')
+2025-10-17 15:01:58,935 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E45, [37 86], ('T7', 'T3')
+2025-10-17 15:01:58,945 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E58, [59 87], ('P7', 'T5')
+2025-10-17 15:01:58,976 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E96, [67 89], ('P8', 'T6')
+2025-10-17 15:01:58,986 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, E108, [45 88], ('T8', 'T4')
+2025-10-17 15:01:59,100 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E6, [25 35], ('Fzp', 'Cza')
+2025-10-17 15:01:59,101 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E7, [25 35], ('Fzp', 'Cza')
+2025-10-17 15:01:59,106 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E13, [24 34], ('F1p', 'C1a')
+2025-10-17 15:01:59,120 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E29, [23 33], ('F3p', 'C3a')
+2025-10-17 15:01:59,122 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E30, [24 34], ('F1p', 'C1a')
+2025-10-17 15:01:59,125 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E34, [22 32], ('F5p', 'C5a')
+2025-10-17 15:01:59,126 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E35, [23 33], ('F3p', 'C3a')
+2025-10-17 15:01:59,130 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E39, [21 31], ('F7p', 'T3a')
+2025-10-17 15:01:59,138 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E47, [51 60], ('C5p', 'P5a')
+2025-10-17 15:01:59,141 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E50, [50 59], ('T3p', 'T5a')
+2025-10-17 15:01:59,142 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E51, [51 60], ('C5p', 'P5a')
+2025-10-17 15:01:59,143 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E52, [52 61], ('C3p', 'P3a')
+2025-10-17 15:01:59,144 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E53, [52 61], ('C3p', 'P3a')
+2025-10-17 15:01:59,145 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E54, [53 62], ('C1p', 'P1a')
+2025-10-17 15:01:59,148 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E57, [50 59], ('T3p', 'T5a')
+2025-10-17 15:01:59,152 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E61, [53 62], ('C1p', 'P1a')
+2025-10-17 15:01:59,168 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E78, [55 64], ('C2p', 'P2a')
+2025-10-17 15:01:59,169 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E79, [55 64], ('C2p', 'P2a')
+2025-10-17 15:01:59,175 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E86, [55 64], ('C2p', 'P2a')
+2025-10-17 15:01:59,181 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E92, [56 65], ('C4p', 'P4a')
+2025-10-17 15:01:59,185 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E97, [57 66], ('C6p', 'P6a')
+2025-10-17 15:01:59,186 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E98, [57 66], ('C6p', 'P6a')
+2025-10-17 15:01:59,188 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E100, [58 67], ('T4p', 'T6a')
+2025-10-17 15:01:59,189 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E101, [58 67], ('T4p', 'T6a')
+2025-10-17 15:01:59,193 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E105, [26 36], ('F2p', 'C2a')
+2025-10-17 15:01:59,194 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E106, [25 35], ('Fzp', 'Cza')
+2025-10-17 15:01:59,198 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E110, [27 37], ('F4p', 'C4a')
+2025-10-17 15:01:59,199 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E111, [27 37], ('F4p', 'C4a')
+2025-10-17 15:01:59,200 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E112, [26 36], ('F2p', 'C2a')
+2025-10-17 15:01:59,204 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E115, [29 39], ('F8p', 'T4a')
+2025-10-17 15:01:59,205 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, E116, [28 38], ('F6p', 'C6a')
+2025-10-17 15:01:59,227 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E1, [3 7], ('aF3', 'aF4')
+2025-10-17 15:01:59,228 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E2, [3 7], ('aF3', 'aF4')
+2025-10-17 15:01:59,305 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, E126, [3 7], ('aF3', 'aF4')
+2025-10-17 15:01:59,322 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E6, [25 35], ("Fz''", "Cz'")
+2025-10-17 15:01:59,323 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E7, [25 35], ("Fz''", "Cz'")
+2025-10-17 15:01:59,330 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E13, [24 34], ("F1''", "C1'")
+2025-10-17 15:01:59,357 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E29, [23 33], ("F3''", "C3'")
+2025-10-17 15:01:59,359 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E30, [24 34], ("F1''", "C1'")
+2025-10-17 15:01:59,362 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E34, [22 32], ("F5''", "C5'")
+2025-10-17 15:01:59,364 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E35, [23 33], ("F3''", "C3'")
+2025-10-17 15:01:59,367 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E39, [21 31], ("F7''", "T3'")
+2025-10-17 15:01:59,374 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E47, [51 60], ("C5''", "P5'")
+2025-10-17 15:01:59,377 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E50, [50 59], ("T3''", "T5'")
+2025-10-17 15:01:59,378 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E51, [51 60], ("C5''", "P5'")
+2025-10-17 15:01:59,379 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E52, [52 61], ("C3''", "P3'")
+2025-10-17 15:01:59,380 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E53, [52 61], ("C3''", "P3'")
+2025-10-17 15:01:59,381 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E54, [53 62], ("C1''", "P1'")
+2025-10-17 15:01:59,384 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E57, [50 59], ("T3''", "T5'")
+2025-10-17 15:01:59,387 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E61, [53 62], ("C1''", "P1'")
+2025-10-17 15:01:59,401 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E78, [55 64], ("C2''", "P2'")
+2025-10-17 15:01:59,402 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E79, [55 64], ("C2''", "P2'")
+2025-10-17 15:01:59,408 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E86, [55 64], ("C2''", "P2'")
+2025-10-17 15:01:59,413 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E92, [56 65], ("C4''", "P4'")
+2025-10-17 15:01:59,417 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E97, [57 66], ("C6''", "P6'")
+2025-10-17 15:01:59,418 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E98, [57 66], ("C6''", "P6'")
+2025-10-17 15:01:59,420 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E100, [58 67], ("T4''", "T6'")
+2025-10-17 15:01:59,421 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E101, [58 67], ("T4''", "T6'")
+2025-10-17 15:01:59,425 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E105, [26 36], ("F2''", "C2'")
+2025-10-17 15:01:59,426 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E106, [25 35], ("Fz''", "Cz'")
+2025-10-17 15:01:59,429 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E110, [27 37], ("F4''", "C4'")
+2025-10-17 15:01:59,430 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E111, [27 37], ("F4''", "C4'")
+2025-10-17 15:01:59,431 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E112, [26 36], ("F2''", "C2'")
+2025-10-17 15:01:59,433 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E115, [29 39], ("F8''", "T4'")
+2025-10-17 15:01:59,434 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, E116, [28 38], ("F6''", "C6'")
+2025-10-17 15:01:59,454 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E15, [0 1], ('Fp1', 'Fp2')
+2025-10-17 15:01:59,455 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, E17, [0 1], ('Fp1', 'Fp2')
+2025-10-17 15:01:59,477 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E15, [ 0 29], ('Fp1', 'Fp2')
+2025-10-17 15:01:59,477 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E16, [ 1 28], ('AF3', 'AF4')
+2025-10-17 15:01:59,478 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, E17, [ 0 29], ('Fp1', 'Fp2')
+2025-10-17 15:01:59,956 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, E6, [147 148], ('E20', 'E21')
+2025-10-17 15:02:00,411 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E11, [17 29], ('18', '30')
+2025-10-17 15:02:00,414 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M43, E16, [17 29], ('18', '30')
+2025-10-17 15:02:00,846 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-64_1.0, E17, [4 9], ('E5', 'E10')
+2025-10-17 15:02:00,936 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-65_1.0, E17, [4 9], ('E5', 'E10')
+2025-10-17 15:02:01,152 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 15:02:01,619 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-256, Cz, [  8 185], ('E9', 'E186')
+2025-10-17 15:02:02,191 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E11, [ 97 126], ('AFF1h', 'AFF2h')
+2025-10-17 15:02:02,196 - __main__ - ERROR - There are more than one minimum values in similarity estimations brainproducts-RNP-BA-128, E15, [ 96 127], ('AFp1', 'AFp2')
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,339 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,340 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:21,341 - __main__ - WARNING - Channel position coordinates include a NAN value [nan nan nan]
+2025-10-17 15:20:23,319 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T3, [37 86], ('T7', 'T3')
+2025-10-17 15:20:23,321 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T4, [45 88], ('T8', 'T4')
+2025-10-17 15:20:23,354 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, T5, [50 59], ('T3p', 'T5a')
+2025-10-17 15:20:23,355 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, T6, [58 67], ('T4p', 'T6a')
+2025-10-17 15:20:23,388 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, T5, [50 59], ("T3''", "T5'")
+2025-10-17 15:20:23,389 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, T6, [58 67], ("T4''", "T6'")
+2025-10-17 15:20:23,679 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 15:21:34,977 - __main__ - WARNING - Channel position values are NAN at EEG Fpz-Cz electrode
+2025-10-17 15:21:34,977 - __main__ - WARNING - Channel position values are NAN at EEG Pz-Oz electrode
+2025-10-17 15:21:34,977 - __main__ - WARNING - Channel position values are NAN at EOG horizontal electrode
+2025-10-17 15:21:34,978 - __main__ - WARNING - Channel position values are NAN at EMG submental electrode
+2025-10-17 15:21:34,978 - __main__ - WARNING - Channel position values are NAN at Marker electrode
+2025-10-17 15:26:17,717 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 59 336], ('P7', 'T5')
+2025-10-17 15:26:17,799 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 67 338], ('P8', 'T6')
+2025-10-17 15:26:17,843 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [37 86], ('T7', 'T3')
+2025-10-17 15:26:17,845 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [59 87], ('P7', 'T5')
+2025-10-17 15:26:17,866 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [45 88], ('T8', 'T4')
+2025-10-17 15:26:17,868 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [67 89], ('P8', 'T6')
+2025-10-17 15:26:17,913 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 15:26:17,915 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 34], ('F1p', 'C1a')
+2025-10-17 15:26:17,918 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [23 33], ('F3p', 'C3a')
+2025-10-17 15:26:17,920 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [52 61], ('C3p', 'P3a')
+2025-10-17 15:26:17,925 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [22 32], ('F5p', 'C5a')
+2025-10-17 15:26:17,927 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [51 60], ('C5p', 'P5a')
+2025-10-17 15:26:17,934 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [50 59], ('T3p', 'T5a')
+2025-10-17 15:26:17,941 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [26 36], ('F2p', 'C2a')
+2025-10-17 15:26:17,944 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [54 63], ('Czp', 'Pza')
+2025-10-17 15:26:17,946 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [27 37], ('F4p', 'C4a')
+2025-10-17 15:26:17,948 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [56 65], ('C4p', 'P4a')
+2025-10-17 15:26:17,953 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [28 38], ('F6p', 'C6a')
+2025-10-17 15:26:17,955 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [57 66], ('C6p', 'P6a')
+2025-10-17 15:26:17,964 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [58 67], ('T4p', 'T6a')
+2025-10-17 15:26:18,003 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [3 7], ('aF3', 'aF4')
+2025-10-17 15:26:18,014 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 15:26:18,015 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 34], ("F1''", "C1'")
+2025-10-17 15:26:18,018 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [23 33], ("F3''", "C3'")
+2025-10-17 15:26:18,021 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [52 61], ("C3''", "P3'")
+2025-10-17 15:26:18,025 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [22 32], ("F5''", "C5'")
+2025-10-17 15:26:18,027 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [51 60], ("C5''", "P5'")
+2025-10-17 15:26:18,033 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [50 59], ("T3''", "T5'")
+2025-10-17 15:26:18,040 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [26 36], ("F2''", "C2'")
+2025-10-17 15:26:18,042 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [54 63], ("Cz''", "Pz'")
+2025-10-17 15:26:18,044 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [27 37], ("F4''", "C4'")
+2025-10-17 15:26:18,046 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [56 65], ("C4''", "P4'")
+2025-10-17 15:26:18,050 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [28 38], ("F6''", "C6'")
+2025-10-17 15:26:18,052 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [57 66], ("C6''", "P6'")
+2025-10-17 15:26:18,058 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [58 67], ("T4''", "T6'")
+2025-10-17 15:26:18,069 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, FCz, [3 7], ('Fz', 'Cz')
+2025-10-17 15:26:18,073 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, CPz, [ 7 11], ('Cz', 'Pz')
+2025-10-17 15:26:18,079 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, FCz, [ 4 25], ('FC1', 'FC2')
+2025-10-17 15:26:18,089 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, CPz, [ 8 21], ('CP1', 'CP2')
+2025-10-17 15:26:18,362 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P11, [223 236], ('G32', 'H13')
+2025-10-17 15:26:18,424 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P12, [61 62], ('B30', 'B31')
+2025-10-17 15:26:18,760 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 16:13:07,790 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 51 313], ('P7', 'T5')
+2025-10-17 16:13:07,865 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 52 288], ('P8', 'T6')
+2025-10-17 16:13:07,905 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [25 65], ('T7', 'T3')
+2025-10-17 16:13:07,906 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [39 64], ('P7', 'T5')
+2025-10-17 16:13:07,921 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [14 40], ('T8', 'T4')
+2025-10-17 16:13:07,922 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [21 39], ('P8', 'T6')
+2025-10-17 16:13:07,950 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 16:13:07,951 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 33], ('F1p', 'C1a')
+2025-10-17 16:13:07,955 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [21 29], ('F3p', 'C3a')
+2025-10-17 16:13:07,957 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [44 53], ('C3p', 'P3a')
+2025-10-17 16:13:07,961 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [17 24], ('F5p', 'C5a')
+2025-10-17 16:13:07,964 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [38 46], ('C5p', 'P5a')
+2025-10-17 16:13:07,971 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [33 40], ('T3p', 'T5a')
+2025-10-17 16:13:07,977 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [14 23], ('F2p', 'C2a')
+2025-10-17 16:13:07,979 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [31 40], ('Czp', 'Pza')
+2025-10-17 16:13:07,980 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [13 22], ('F4p', 'C4a')
+2025-10-17 16:13:07,982 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [29 38], ('C4p', 'P4a')
+2025-10-17 16:13:07,985 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [11 20], ('F6p', 'C6a')
+2025-10-17 16:13:07,986 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [25 34], ('C6p', 'P6a')
+2025-10-17 16:13:07,990 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [21 30], ('T4p', 'T6a')
+2025-10-17 16:13:08,017 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [1 2], ('aF3', 'aF4')
+2025-10-17 16:13:08,024 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 16:13:08,025 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 33], ("F1''", "C1'")
+2025-10-17 16:13:08,028 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [21 29], ("F3''", "C3'")
+2025-10-17 16:13:08,030 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [44 53], ("C3''", "P3'")
+2025-10-17 16:13:08,035 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [17 24], ("F5''", "C5'")
+2025-10-17 16:13:08,036 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [38 46], ("C5''", "P5'")
+2025-10-17 16:13:08,041 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [33 40], ("T3''", "T5'")
+2025-10-17 16:13:08,047 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [14 23], ("F2''", "C2'")
+2025-10-17 16:13:08,048 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [31 40], ("Cz''", "Pz'")
+2025-10-17 16:13:08,049 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [13 22], ("F4''", "C4'")
+2025-10-17 16:13:08,051 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [29 38], ("C4''", "P4'")
+2025-10-17 16:13:08,054 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [11 20], ("F6''", "C6'")
+2025-10-17 16:13:08,055 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [25 34], ("C6''", "P6'")
+2025-10-17 16:13:08,059 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [21 30], ("T4''", "T6'")
+2025-10-17 16:16:42,442 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 51 313], ('P7', 'T5')
+2025-10-17 16:16:42,518 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 52 288], ('P8', 'T6')
+2025-10-17 16:16:42,556 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [25 65], ('T7', 'T3')
+2025-10-17 16:16:42,558 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [39 64], ('P7', 'T5')
+2025-10-17 16:16:42,571 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [14 40], ('T8', 'T4')
+2025-10-17 16:16:42,572 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [21 39], ('P8', 'T6')
+2025-10-17 16:16:42,601 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 16:16:42,602 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 33], ('F1p', 'C1a')
+2025-10-17 16:16:42,605 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [21 29], ('F3p', 'C3a')
+2025-10-17 16:16:42,608 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [44 53], ('C3p', 'P3a')
+2025-10-17 16:16:42,612 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [17 24], ('F5p', 'C5a')
+2025-10-17 16:16:42,613 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [38 46], ('C5p', 'P5a')
+2025-10-17 16:16:42,619 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [33 40], ('T3p', 'T5a')
+2025-10-17 16:16:42,625 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [14 23], ('F2p', 'C2a')
+2025-10-17 16:16:42,627 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [31 40], ('Czp', 'Pza')
+2025-10-17 16:16:42,629 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [13 22], ('F4p', 'C4a')
+2025-10-17 16:16:42,630 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [29 38], ('C4p', 'P4a')
+2025-10-17 16:16:42,633 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [11 20], ('F6p', 'C6a')
+2025-10-17 16:16:42,634 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [25 34], ('C6p', 'P6a')
+2025-10-17 16:16:42,638 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [21 30], ('T4p', 'T6a')
+2025-10-17 16:16:42,665 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [1 2], ('aF3', 'aF4')
+2025-10-17 16:16:42,671 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 16:16:42,673 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 33], ("F1''", "C1'")
+2025-10-17 16:16:42,676 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [21 29], ("F3''", "C3'")
+2025-10-17 16:16:42,678 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [44 53], ("C3''", "P3'")
+2025-10-17 16:16:42,682 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [17 24], ("F5''", "C5'")
+2025-10-17 16:16:42,684 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [38 46], ("C5''", "P5'")
+2025-10-17 16:16:42,690 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [33 40], ("T3''", "T5'")
+2025-10-17 16:16:42,696 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [14 23], ("F2''", "C2'")
+2025-10-17 16:16:42,697 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [31 40], ("Cz''", "Pz'")
+2025-10-17 16:16:42,699 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [13 22], ("F4''", "C4'")
+2025-10-17 16:16:42,700 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [29 38], ("C4''", "P4'")
+2025-10-17 16:16:42,703 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [11 20], ("F6''", "C6'")
+2025-10-17 16:16:42,705 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [25 34], ("C6''", "P6'")
+2025-10-17 16:16:42,709 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [21 30], ("T4''", "T6'")
+2025-10-17 16:16:42,718 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, FCz, [ 4 25], ('FC1', 'FC2')
+2025-10-17 16:16:43,030 - __main__ - ERROR - There are more than one minimum values in similarity estimations easycap-M10, Iz, [1 2], ('51', '61')
+2025-10-17 16:16:43,195 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-64_1.0, Iz, [4 5], ('E62', 'E63')
+2025-10-17 16:16:43,221 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-65_1.0, Iz, [5 6], ('E62', 'E63')
+2025-10-17 16:16:43,226 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 16:19:46,188 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 59 336], ('P7', 'T5')
+2025-10-17 16:19:46,272 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 67 338], ('P8', 'T6')
+2025-10-17 16:19:46,316 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [37 86], ('T7', 'T3')
+2025-10-17 16:19:46,318 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [59 87], ('P7', 'T5')
+2025-10-17 16:19:46,348 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [45 88], ('T8', 'T4')
+2025-10-17 16:19:46,351 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [67 89], ('P8', 'T6')
+2025-10-17 16:19:46,396 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 16:19:46,397 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 34], ('F1p', 'C1a')
+2025-10-17 16:19:46,400 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [23 33], ('F3p', 'C3a')
+2025-10-17 16:19:46,402 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [52 61], ('C3p', 'P3a')
+2025-10-17 16:19:46,407 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [22 32], ('F5p', 'C5a')
+2025-10-17 16:19:46,409 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [51 60], ('C5p', 'P5a')
+2025-10-17 16:19:46,416 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [50 59], ('T3p', 'T5a')
+2025-10-17 16:19:46,423 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [26 36], ('F2p', 'C2a')
+2025-10-17 16:19:46,426 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [54 63], ('Czp', 'Pza')
+2025-10-17 16:19:46,427 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [27 37], ('F4p', 'C4a')
+2025-10-17 16:19:46,430 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [56 65], ('C4p', 'P4a')
+2025-10-17 16:19:46,434 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [28 38], ('F6p', 'C6a')
+2025-10-17 16:19:46,436 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [57 66], ('C6p', 'P6a')
+2025-10-17 16:19:46,443 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [58 67], ('T4p', 'T6a')
+2025-10-17 16:19:46,485 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [3 7], ('aF3', 'aF4')
+2025-10-17 16:19:46,497 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 16:19:46,498 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 34], ("F1''", "C1'")
+2025-10-17 16:19:46,503 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [23 33], ("F3''", "C3'")
+2025-10-17 16:19:46,505 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [52 61], ("C3''", "P3'")
+2025-10-17 16:19:46,509 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [22 32], ("F5''", "C5'")
+2025-10-17 16:19:46,511 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [51 60], ("C5''", "P5'")
+2025-10-17 16:19:46,518 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [50 59], ("T3''", "T5'")
+2025-10-17 16:19:46,526 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [26 36], ("F2''", "C2'")
+2025-10-17 16:19:46,528 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [54 63], ("Cz''", "Pz'")
+2025-10-17 16:19:46,530 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [27 37], ("F4''", "C4'")
+2025-10-17 16:19:46,532 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [56 65], ("C4''", "P4'")
+2025-10-17 16:19:46,537 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [28 38], ("F6''", "C6'")
+2025-10-17 16:19:46,541 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [57 66], ("C6''", "P6'")
+2025-10-17 16:19:46,549 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [58 67], ("T4''", "T6'")
+2025-10-17 16:19:46,560 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, FCz, [3 7], ('Fz', 'Cz')
+2025-10-17 16:19:46,566 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, CPz, [ 7 11], ('Cz', 'Pz')
+2025-10-17 16:19:46,573 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, FCz, [ 4 25], ('FC1', 'FC2')
+2025-10-17 16:19:46,581 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, CPz, [ 8 21], ('CP1', 'CP2')
+2025-10-17 16:19:46,864 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P11, [223 236], ('G32', 'H13')
+2025-10-17 16:19:46,933 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P12, [61 62], ('B30', 'B31')
+2025-10-17 16:19:47,292 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 16:30:33,214 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 59 336], ('P7', 'T5')
+2025-10-17 16:30:33,301 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 67 338], ('P8', 'T6')
+2025-10-17 16:30:33,353 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [37 86], ('T7', 'T3')
+2025-10-17 16:30:33,355 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [59 87], ('P7', 'T5')
+2025-10-17 16:30:33,377 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [45 88], ('T8', 'T4')
+2025-10-17 16:30:33,380 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [67 89], ('P8', 'T6')
+2025-10-17 16:30:33,427 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 16:30:33,429 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 34], ('F1p', 'C1a')
+2025-10-17 16:30:33,433 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [23 33], ('F3p', 'C3a')
+2025-10-17 16:30:33,435 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [52 61], ('C3p', 'P3a')
+2025-10-17 16:30:33,440 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [22 32], ('F5p', 'C5a')
+2025-10-17 16:30:33,443 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [51 60], ('C5p', 'P5a')
+2025-10-17 16:30:33,449 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [50 59], ('T3p', 'T5a')
+2025-10-17 16:30:33,458 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [26 36], ('F2p', 'C2a')
+2025-10-17 16:30:33,460 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [54 63], ('Czp', 'Pza')
+2025-10-17 16:30:33,462 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [27 37], ('F4p', 'C4a')
+2025-10-17 16:30:33,464 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [56 65], ('C4p', 'P4a')
+2025-10-17 16:30:33,469 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [28 38], ('F6p', 'C6a')
+2025-10-17 16:30:33,472 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [57 66], ('C6p', 'P6a')
+2025-10-17 16:30:33,490 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [58 67], ('T4p', 'T6a')
+2025-10-17 16:30:33,542 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [3 7], ('aF3', 'aF4')
+2025-10-17 16:30:33,557 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 16:30:33,558 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 34], ("F1''", "C1'")
+2025-10-17 16:30:33,562 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [23 33], ("F3''", "C3'")
+2025-10-17 16:30:33,565 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [52 61], ("C3''", "P3'")
+2025-10-17 16:30:33,570 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [22 32], ("F5''", "C5'")
+2025-10-17 16:30:33,572 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [51 60], ("C5''", "P5'")
+2025-10-17 16:30:33,580 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [50 59], ("T3''", "T5'")
+2025-10-17 16:30:33,588 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [26 36], ("F2''", "C2'")
+2025-10-17 16:30:33,591 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [54 63], ("Cz''", "Pz'")
+2025-10-17 16:30:33,593 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [27 37], ("F4''", "C4'")
+2025-10-17 16:30:33,595 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [56 65], ("C4''", "P4'")
+2025-10-17 16:30:33,601 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [28 38], ("F6''", "C6'")
+2025-10-17 16:30:33,603 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [57 66], ("C6''", "P6'")
+2025-10-17 16:30:33,611 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [58 67], ("T4''", "T6'")
+2025-10-17 16:30:33,625 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, FCz, [3 7], ('Fz', 'Cz')
+2025-10-17 16:30:33,631 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, CPz, [ 7 11], ('Cz', 'Pz')
+2025-10-17 16:30:33,640 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, FCz, [ 4 25], ('FC1', 'FC2')
+2025-10-17 16:30:33,651 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, CPz, [ 8 21], ('CP1', 'CP2')
+2025-10-17 16:30:33,954 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P11, [223 236], ('G32', 'H13')
+2025-10-17 16:30:34,030 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P12, [61 62], ('B30', 'B31')
+2025-10-17 16:30:34,436 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
+2025-10-17 16:33:33,387 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P7, [ 59 336], ('P7', 'T5')
+2025-10-17 16:33:33,473 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1005, P8, [ 67 338], ('P8', 'T6')
+2025-10-17 16:33:33,517 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T7, [37 86], ('T7', 'T3')
+2025-10-17 16:33:33,519 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P7, [59 87], ('P7', 'T5')
+2025-10-17 16:33:33,542 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, T8, [45 88], ('T8', 'T4')
+2025-10-17 16:33:33,544 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_1020, P8, [67 89], ('P8', 'T6')
+2025-10-17 16:33:33,591 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FCz, [25 35], ('Fzp', 'Cza')
+2025-10-17 16:33:33,592 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC1, [24 34], ('F1p', 'C1a')
+2025-10-17 16:33:33,596 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC3, [23 33], ('F3p', 'C3a')
+2025-10-17 16:33:33,598 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP3, [52 61], ('C3p', 'P3a')
+2025-10-17 16:33:33,603 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC5, [22 32], ('F5p', 'C5a')
+2025-10-17 16:33:33,605 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP5, [51 60], ('C5p', 'P5a')
+2025-10-17 16:33:33,611 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP7, [50 59], ('T3p', 'T5a')
+2025-10-17 16:33:33,619 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC2, [26 36], ('F2p', 'C2a')
+2025-10-17 16:33:33,621 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CPz, [54 63], ('Czp', 'Pza')
+2025-10-17 16:33:33,623 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC4, [27 37], ('F4p', 'C4a')
+2025-10-17 16:33:33,625 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP4, [56 65], ('C4p', 'P4a')
+2025-10-17 16:33:33,630 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, FC6, [28 38], ('F6p', 'C6a')
+2025-10-17 16:33:33,632 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, CP6, [57 66], ('C6p', 'P6a')
+2025-10-17 16:33:33,638 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_postfixed, TP8, [58 67], ('T4p', 'T6a')
+2025-10-17 16:33:33,680 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_prefixed, AF8, [3 7], ('aF3', 'aF4')
+2025-10-17 16:33:33,692 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FCz, [25 35], ("Fz''", "Cz'")
+2025-10-17 16:33:33,693 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC1, [24 34], ("F1''", "C1'")
+2025-10-17 16:33:33,697 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC3, [23 33], ("F3''", "C3'")
+2025-10-17 16:33:33,699 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP3, [52 61], ("C3''", "P3'")
+2025-10-17 16:33:33,704 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC5, [22 32], ("F5''", "C5'")
+2025-10-17 16:33:33,706 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP5, [51 60], ("C5''", "P5'")
+2025-10-17 16:33:33,713 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP7, [50 59], ("T3''", "T5'")
+2025-10-17 16:33:33,720 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC2, [26 36], ("F2''", "C2'")
+2025-10-17 16:33:33,722 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CPz, [54 63], ("Cz''", "Pz'")
+2025-10-17 16:33:33,724 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC4, [27 37], ("F4''", "C4'")
+2025-10-17 16:33:33,726 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP4, [56 65], ("C4''", "P4'")
+2025-10-17 16:33:33,731 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, FC6, [28 38], ("F6''", "C6'")
+2025-10-17 16:33:33,733 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, CP6, [57 66], ("C6''", "P6'")
+2025-10-17 16:33:33,740 - __main__ - ERROR - There are more than one minimum values in similarity estimations standard_primed, TP8, [58 67], ("T4''", "T6'")
+2025-10-17 16:33:33,751 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, FCz, [3 7], ('Fz', 'Cz')
+2025-10-17 16:33:33,756 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi16, CPz, [ 7 11], ('Cz', 'Pz')
+2025-10-17 16:33:33,763 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, FCz, [ 4 25], ('FC1', 'FC2')
+2025-10-17 16:33:33,772 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi32, CPz, [ 8 21], ('CP1', 'CP2')
+2025-10-17 16:33:34,070 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P11, [223 236], ('G32', 'H13')
+2025-10-17 16:33:34,142 - __main__ - ERROR - There are more than one minimum values in similarity estimations biosemi256, P12, [61 62], ('B30', 'B31')
+2025-10-17 16:33:34,505 - __main__ - ERROR - There are more than one minimum values in similarity estimations GSN-HydroCel-128, Cz, [  6 105], ('E7', 'E106')
