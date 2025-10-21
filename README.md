@@ -1,6 +1,6 @@
 # pyeeg: EEG Data Processing Pipeline
 
-A modular Python pipeline for EEG data ingestion, preprocessing, feature extraction, modeling, and evaluation.
+A modular Python pipeline for EEG data I/O, preprocessing, feature extraction, modeling, and evaluation.
 
 ## Installation
 
@@ -62,4 +62,5 @@ pytest
 ## License
 
 This project is licensed under the terms of the MIT license.
+
 # pyeeg
