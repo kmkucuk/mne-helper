@@ -184,13 +184,16 @@ def position_matching_position(data_chan_info, montage_name, loc_position_dict):
             total_sim_score[rowi] = position_matrix[rowi, match_chan_indx]
 
     if loc_position_dict[montage_name]['invalid']:
-        loc_position_dict[montage_name]['position_score'] = np.mean(total_sim_score) * 1000
+        loc_position_dict[montage_name]['position_score'] = round(np.mean(total_sim_score) * 10,5)
     else:
         loc_position_dict[montage_name]['position_score'] = "INVALID"
-    get_matched_chan_ratio(loc_position_dict, montage_name)
+    loc_position_dict = get_matched_chan_ratio(loc_position_dict, montage_name)
     print(f"\n{montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
     return loc_position_dict
 
+def select_best_montages(loc_position_dict):
+    
+    pass
 
 def find_min_matrix(matrix, start_row=0): 
     min_col = np.argmin(matrix[start_row, :])
@@ -202,7 +205,7 @@ def find_min_matrix(matrix, start_row=0):
         min_row = np.argmin(matrix[:, min_col])
         same_min_rows = np.where(matrix[:, min_col]==matrix[min_row, min_col])[0]
         if len(same_min_rows) > 1:
-            logger.info("More than data channels have the same position for this montage channel")
+            logger.info("More than one data channels have the same position for this montage channel")
             return None
         else:                                    
             if start_row == min_row:
