@@ -2,13 +2,14 @@
 from dotenv import load_dotenv
 import os
 
-def fetch_sample_file(datatype = 'EDF'):
+def fetch_sample_file(datatype = 'EDF') -> str:
     """Loads the sample data with the given data type"""    
     load_dotenv()
     print(f"Sampe file is an {datatype} file")
     return  os.getenv(f"{datatype}_TEST_FILE")
 
-def find_folder(start_dir=None, target_folder=None):
+def find_folder(start_dir=None, target_folder=None) -> str:
+    """Finds a folder by going upwards in directory """    
     current_dir = os.path.abspath(start_dir or os.getcwd())
 
     while True:
@@ -22,8 +23,7 @@ def find_folder(start_dir=None, target_folder=None):
 
         current_dir = parent_dir
 
-
-def set_logdir(log_file):
+def set_logdir(log_file) -> str:
     """Gets log dir """    
     load_dotenv()
     log_dir = find_folder(target_folder=os.getenv("LOG_DIR"))

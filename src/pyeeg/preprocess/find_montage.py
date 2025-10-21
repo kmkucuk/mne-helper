@@ -1,8 +1,9 @@
-from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES
+from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES, INVALID_POS_SCORE
 from pyeeg.utils.logger import logger
 from mne._fiff._digitization import DigPoint
 from mne.channels import make_standard_montage
 from mne._fiff.constants import FIFF
+import mne
 import numpy as np
 import math
 
@@ -96,14 +97,14 @@ def adjust_nonstd_chans_dig(data_info):
                 data_info['dig'][-1]['r'] = cchan['loc'][0:3]       
     return data_info
      
-def get_cardinal_chan_count(data_info):
+def get_cardinal_chan_count(data_info) -> int:
         count = 0 
         for digi in data_info['dig']:
             if digi['kind'] == FIFF.FIFFV_POINT_CARDINAL:
                 count += 1
         return count
 
-def create_position_dict(data_chan_info):
+def create_position_dict(data_chan_info) -> dict:
     """Initializes a position dict 
     :param data_chan_info: mne.raw.info instance (info of your raw_data)
     Returns
@@ -124,7 +125,7 @@ def create_position_dict(data_chan_info):
     return loc_position_dict
 
 
-def position_pipeline(data_chan_info, position_method="position"):
+def position_pipeline(data_chan_info, position_method="position") -> dict:
     loc_position_dict = create_position_dict(data_chan_info) 
     for montage_name in MNE_DEFAULT_MONTAGES:
         if position_method == "position":
@@ -136,7 +137,7 @@ def position_pipeline(data_chan_info, position_method="position"):
             raise ValueError("Wrong position method")
     return loc_position_dict
     
-def name_matching_position(data_chan_info, montage_name, loc_position_dict):
+def name_matching_position(data_chan_info, montage_name, loc_position_dict) -> dict:
     montage = make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()    
     for ch_name, pos_val in data_chan_info.items():          
@@ -160,7 +161,7 @@ def name_matching_position(data_chan_info, montage_name, loc_position_dict):
     loc_position_dict[montage_name]['invalid'] = False
     return loc_position_dict
 
-def position_matching_position(data_chan_info, montage_name, loc_position_dict):
+def position_matching_position(data_chan_info, montage_name, loc_position_dict) -> dict:
     montage = make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()        
     mchnames = list(mchpos.keys())
@@ -184,16 +185,54 @@ def position_matching_position(data_chan_info, montage_name, loc_position_dict):
             total_sim_score[rowi] = position_matrix[rowi, match_chan_indx]
 
     if loc_position_dict[montage_name]['invalid']:
-        loc_position_dict[montage_name]['position_score'] = round(np.mean(total_sim_score) * 10,5)
+        loc_position_dict[montage_name]['position_score'] = round(np.mean(total_sim_score) * 100, 5)
     else:
-        loc_position_dict[montage_name]['position_score'] = "INVALID"
+        loc_position_dict[montage_name]['position_score'] = INVALID_POS_SCORE
     loc_position_dict = get_matched_chan_ratio(loc_position_dict, montage_name)
     print(f"\n{montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
     return loc_position_dict
 
-def select_best_montages(loc_position_dict):
+def get_scoreboard(loc_position_dict) -> list:
+    score_vector = []
+    key_vector = []
+    for key, val in loc_position_dict.items():
+        score_vector.append(val["position_score"])
+        key_vector.append(key)
+
+    ordered_vector = np.sort(score_vector)
+    ordered_key = []
+    for score in ordered_vector:
+        order_index = np.where(score==score_vector)[0][0]
+        ordered_key.append(key_vector[order_index])
     
-    pass
+    return ordered_key
+
+def select_best_montage(loc_position_dict, ordered_key, show_n_montages = 5) -> str:
+    indx = 1
+    for montage_name in ordered_key[0:show_n_montages]:
+        print(f"\n ({indx}){montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
+        indx += 1
+    print(f"\nType in the number of montage you want to select: ")
+    while True:
+        montage_index = input()
+        if montage_index.isnumeric():
+            montage_index = int(montage_index)
+            montage_index -= 1 # subtract 1 for py indexing
+            if montage_index > show_n_montages:
+                print(f"\nPlease select between montages between 1 and {show_n_montages}")            
+            elif montage_index < 0:
+                print(f"\nPlease select a number 1 or above")
+            elif loc_position_dict[ordered_key[montage_index]]['position_score'] == INVALID_POS_SCORE:
+                print(f"\nMontage you selected is not valid for the data you have, please select another.")
+            else:
+                break           
+        else:
+            print(f"\nPlease type in a number, not a string: {montage_index}")
+
+    print(f"\n*********")
+    print(f"Selected {ordered_key[montage_index]} montage")
+    print(f"\n*********")
+    return ordered_key[montage_index]
 
 def find_min_matrix(matrix, start_row=0): 
     min_col = np.argmin(matrix[start_row, :])
@@ -229,12 +268,9 @@ def resolve_duplicates(position_dict, montage_name):
         vec.append(val)
     return find_duplicates(vec)
 
-
 def find_duplicates(array):
-    # Initialize an empty set to store seen elements
     s = set()
 
-    # List to store duplicates
     dup = []
     dupindx = []
     indx = 0
