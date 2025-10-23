@@ -1,6 +1,6 @@
-# pyeeg: EEG Data Processing Pipeline
+# mne-helper: EEG Data Processing Pipeline
 
-A modular Python pipeline for EEG data I/O, preprocessing, feature extraction, modeling, and evaluation.
+A modular Python pipeline for EEG data I/O, preprocessing, feature extraction, modeling, and evaluation. 
 
 ## Installation
 
