@@ -1,7 +1,7 @@
+from pyeeg.io.loader import read_raw_data
+from pyeeg.io.getdir import fetch_sample_file
 
-import mne
-
-raw_data.rename_channels(chdict['biosemi32']['changed_names'])
-raw_data.set_montage('biosemi32')
+sample_file = fetch_sample_file('BRAINVISION')
+raw_data = read_raw_data(sample_file)
+raw_data.load_data()
 raw_data.plot(block=True)
-a=0

@@ -29,3 +29,8 @@ def set_logdir(log_file) -> str:
     log_dir = find_folder(target_folder=os.getenv("LOG_DIR"))
     print(f"Found log folder: {log_dir}")
     return log_dir+ f"/{log_file}"
+
+def set_exportdir(export_file) -> str:
+    load_dotenv()    
+    export_dir = find_folder(target_folder='data') + '/' + os.getenv('EXPORT_DATA_DIR')    
+    return export_dir + f"/{export_file}"

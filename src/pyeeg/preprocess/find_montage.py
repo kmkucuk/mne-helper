@@ -117,10 +117,10 @@ def create_position_dict(data_chan_info) -> dict:
         loc_position_dict[montage_name] = {}
         loc_position_dict[montage_name]['chan_names'] = dict(zip(list(data_chan_info.keys()), [''] * len(list(data_chan_info.keys()))))
         loc_position_dict[montage_name]['chan_positions'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
-        loc_position_dict[montage_name]['chan_position'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
+        loc_position_dict[montage_name]['ch_pos_score'] = dict(zip(list(data_chan_info.keys()), [[None, None, None]] * len(list(data_chan_info.keys())))) 
         loc_position_dict[montage_name]['position_score'] = []
         loc_position_dict[montage_name]['total_position_score'] = []
-        loc_position_dict[montage_name]['invalid'] = False      
+        loc_position_dict[montage_name]['valid'] = True      
 
     return loc_position_dict
 
@@ -154,11 +154,11 @@ def name_matching_position(data_chan_info, montage_name, loc_position_dict) -> d
 
         loc_position_dict[montage_name]['chan_names'][ch_name] = ch_reg
         loc_position_dict[montage_name]['chan_positions'][ch_name] = ch_pos 
-        loc_position_dict[montage_name]['chan_position'][ch_name] = position_score
+        loc_position_dict[montage_name]['ch_pos_score'][ch_name] = position_score
 
     loc_position_dict[montage_name]['position_score'] = []
     loc_position_dict[montage_name]['total_position_score'] = []
-    loc_position_dict[montage_name]['invalid'] = False
+    loc_position_dict[montage_name]['valid'] = True
     return loc_position_dict
 
 def position_matching_position(data_chan_info, montage_name, loc_position_dict) -> dict:
@@ -177,40 +177,47 @@ def position_matching_position(data_chan_info, montage_name, loc_position_dict) 
     for rowi in range(0, rows):
         match_chan_indx = find_min_matrix(position_matrix, rowi)
         if match_chan_indx == None:
-            loc_position_dict[montage_name]['invalid'] = True
+            loc_position_dict[montage_name]['valid'] = False
         else:
             loc_position_dict[montage_name]['chan_names'][dchannames[rowi]] = mchnames[match_chan_indx]
             loc_position_dict[montage_name]['chan_positions'][dchannames[rowi]] = mchpos[mchnames[match_chan_indx]] 
-            loc_position_dict[montage_name]['chan_position'][dchannames[rowi]] = position_matrix[rowi, match_chan_indx]     
+            loc_position_dict[montage_name]['ch_pos_score'][dchannames[rowi]] = position_matrix[rowi, match_chan_indx]     
             total_sim_score[rowi] = position_matrix[rowi, match_chan_indx]
 
-    if loc_position_dict[montage_name]['invalid']:
+    if loc_position_dict[montage_name]['valid']:
         loc_position_dict[montage_name]['position_score'] = round(np.mean(total_sim_score) * 100, 5)
     else:
         loc_position_dict[montage_name]['position_score'] = INVALID_POS_SCORE
     loc_position_dict = get_matched_chan_ratio(loc_position_dict, montage_name)
-    print(f"\n{montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
+    # print(f"\n{montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
     return loc_position_dict
 
 def get_scoreboard(loc_position_dict) -> list:
-    score_vector = []
-    key_vector = []
+    score_vector = np.array([])
+    key_vector = np.array([])
     for key, val in loc_position_dict.items():
-        score_vector.append(val["position_score"])
-        key_vector.append(key)
+        score_vector = np.append(score_vector, val["position_score"])
+        key_vector = np.append(key_vector, key)
 
-    ordered_vector = np.sort(score_vector)
+    order_index = np.argsort(score_vector)
     ordered_key = []
-    for score in ordered_vector:
-        order_index = np.where(score==score_vector)[0][0]
-        ordered_key.append(key_vector[order_index])
+    for index in order_index:
+        ordered_key.append(key_vector[index])
     
+    if len(set(score_vector)) == 1:
+        if list(set(score_vector))[0] == INVALID_POS_SCORE:
+            logger.warning(f"Distance values for all montages are invalid for the data, please assign a montage manually if needed.")
+            return False
+
     return ordered_key
 
-def select_best_montage(loc_position_dict, ordered_key, show_n_montages = 5) -> str:
+def select_best_montage(loc_position_dict, ordered_key) -> str:
+    if ordered_key == False:
+        logger.warning(f"Cannot display montage distance values because none of the montages had applicable position values for your data.")
+        return False
     indx = 1
-    for montage_name in ordered_key[0:show_n_montages]:
-        print(f"\n ({indx}){montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
+    for montage_name in ordered_key:
+        print(f"\n({indx}){montage_name}: {loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
         indx += 1
     print(f"\nType in the number of montage you want to select: ")
     while True:
@@ -218,14 +225,17 @@ def select_best_montage(loc_position_dict, ordered_key, show_n_montages = 5) -> 
         if montage_index.isnumeric():
             montage_index = int(montage_index)
             montage_index -= 1 # subtract 1 for py indexing
-            if montage_index > show_n_montages:
-                print(f"\nPlease select between montages between 1 and {show_n_montages}")            
+            if montage_index > len(ordered_key):
+                print(f"\nPlease select between montages 1 and {len(ordered_key)}")            
             elif montage_index < 0:
                 print(f"\nPlease select a number 1 or above")
             elif loc_position_dict[ordered_key[montage_index]]['position_score'] == INVALID_POS_SCORE:
-                print(f"\nMontage you selected is not valid for the data you have, please select another.")
+                print(f"\nMontage is not valid for the data, please select another.")
             else:
                 break           
+        elif montage_index == 'e':
+            print("Selection cancelled...")
+            return False
         else:
             print(f"\nPlease type in a number, not a string: {montage_index}")
 

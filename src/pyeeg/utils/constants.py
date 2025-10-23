@@ -18,3 +18,5 @@ NON_STANDARD_CHANNEL_TYPES = {
 INVALID_POS_SCORE = 999 # assigned to invalid distances in find_montage()
 
 MNE_DEFAULT_MONTAGES = ['standard_1005', 'standard_1020', 'standard_alphabetic', 'standard_postfixed', 'standard_prefixed', 'standard_primed', 'biosemi16', 'biosemi32', 'biosemi64', 'biosemi128', 'biosemi160', 'biosemi256', 'easycap-M1', 'easycap-M10', 'easycap-M43', 'EGI_256', 'GSN-HydroCel-32', 'GSN-HydroCel-64_1.0', 'GSN-HydroCel-65_1.0', 'GSN-HydroCel-128', 'GSN-HydroCel-129', 'GSN-HydroCel-256', 'GSN-HydroCel-257', 'mgh60', 'mgh70', 'artinis-octamon', 'artinis-brite23', 'brainproducts-RNP-BA-128']
+
+DEFAULT_SEGMENTATION_WINDOW = [-0.5, 1]
