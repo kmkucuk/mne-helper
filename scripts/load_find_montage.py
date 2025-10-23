@@ -15,4 +15,4 @@ selected_montage = select_best_montage(position_dict, ordered_keys)
 raw_data.rename_channels(position_dict[selected_montage]['chan_names'])
 raw_data.set_montage(selected_montage)
 raw_data.plot(block=True)
-a=0 
+a=0

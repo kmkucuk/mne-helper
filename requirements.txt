@@ -1,0 +1,21 @@
+# Core EEG processing dependencies
+mne>=1.0.0
+numpy>=1.20.0
+
+# Data handling and I/O
+python-dotenv>=0.19.0
+
+# Scientific computing and visualization
+scipy>=1.7.0
+matplotlib>=3.5.0
+
+# Optional: Machine learning (if used in models)
+scikit-learn>=1.0.0
+
+# Development and testing
+pytest>=6.0.0
+pytest-cov>=3.0.0
+
+# Code quality (optional)
+pre-commit>=2.15.0
+ruff>=0.1.0
