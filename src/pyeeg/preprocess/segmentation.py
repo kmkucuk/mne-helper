@@ -1,10 +1,9 @@
 import mne
 import numpy as np
+import logging
 
-from pyeeg.utils.logger import initialize_logger
+from pyeeg.utils.logger import logger
 from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW
-
-logger = initialize_logger()
 
 def create_epoch_dict(time_window=DEFAULT_SEGMENTATION_WINDOW) -> dict:
     """

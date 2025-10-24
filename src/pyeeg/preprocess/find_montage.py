@@ -1,15 +1,11 @@
 from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES, INVALID_POS_SCORE
-from pyeeg.utils.logger import initialize_logger
+from pyeeg.utils.logger import logger
 from mne._fiff._digitization import DigPoint
 from mne.channels import make_standard_montage
 from mne._fiff.constants import FIFF
 import mne
 import numpy as np
 import math
-
-
-logger = initialize_logger()
-
 
 def check_position_match(montage_pos, data_pos) -> bool:      
     """Checks if two positions match on all coordinates.

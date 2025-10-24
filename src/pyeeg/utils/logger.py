@@ -1,12 +1,10 @@
 import logging
 from pyeeg.io.getdir import set_logdir
 
-def initialize_logger():
-    logger = logging.getLogger(__name__)
-    logger.setLevel(logging.DEBUG)
-    logger.propagate = False
-    handler = logging.FileHandler(set_logdir('test.log'))
-    formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    return logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+logger.propagate = False
+handler = logging.FileHandler(set_logdir('test.log'))
+formatter = logging.Formatter("%(asctime)s - %(module)s:%(lineno)d - %(levelname)s - %(message)s")
+handler.setFormatter(formatter)
+logger.addHandler(handler)

@@ -7,12 +7,6 @@ from pyeeg.io.getdir import fetch_sample_file
 
 from pyeeg.preprocess.segmentation import create_epoch_dict, get_meta_data, select_event, segment_data_markers, plot_segmented_data
 
-from pyeeg.utils.logger import initialize_logger
-from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW
-
-
-logger = initialize_logger()
-
 SAMPLE_FILE = 'BRAINVISION'
 
 sample_file = fetch_sample_file('BRAINVISION')
