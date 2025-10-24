@@ -7,11 +7,13 @@ from pyeeg.io.getdir import fetch_sample_file
 
 from pyeeg.preprocess.segmentation import create_epoch_dict, get_meta_data, select_event, segment_data_markers, plot_segmented_data
 
-from pyeeg.utils.logger import logger
+from pyeeg.utils.logger import initialize_logger
 from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW
 
-SAMPLE_FILE = 'BRAINVISION'
 
+logger = initialize_logger()
+
+SAMPLE_FILE = 'BRAINVISION'
 
 sample_file = fetch_sample_file('BRAINVISION')
 raw_data = read_raw_data(sample_file)
@@ -25,6 +27,7 @@ fig = plot_segmented_data(epochs, epoch_dict)
 if SAMPLE_FILE == 'BRAINVISION':
     freq_avg = epochs['Stimulus/Frequent'].average()
     rare_avg = epochs['Stimulus/Rare'].average()
+    rare_avg.plot()
     rare_avg.plot_topomap(times=[0.1, 0.2, 0.3], average=0.05)
     rare_avg.plot_joint()
 

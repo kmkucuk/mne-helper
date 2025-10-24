@@ -1,8 +1,10 @@
 import mne
 import numpy as np
 
-from pyeeg.utils.logger import logger
+from pyeeg.utils.logger import initialize_logger
 from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW
+
+logger = initialize_logger()
 
 def create_epoch_dict(time_window=DEFAULT_SEGMENTATION_WINDOW) -> dict:
     """
@@ -14,6 +16,7 @@ def create_epoch_dict(time_window=DEFAULT_SEGMENTATION_WINDOW) -> dict:
     Returns:
         epoch_dict (dict)
     """    
+    logger.critical("I'm here bitch")
     epoch_dict = {}
     epoch_dict['metadata'] = []
     epoch_dict['events'] = []
@@ -126,7 +129,7 @@ def select_event(epoch_dict) -> dict:
     epoch_dict['selected_events'] = selected_events
     return epoch_dict
 
-def segment_data_markers(raw_data, epoch_dict) -> mne.epoch.Epochs:
+def segment_data_markers(raw_data, epoch_dict):
     """
     Creates epoched data using selected events in epoch_dict
 
