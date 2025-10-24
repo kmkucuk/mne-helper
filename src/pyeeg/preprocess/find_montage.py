@@ -1,19 +1,24 @@
-from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES, INVALID_POS_SCORE
-from pyeeg.utils.logger import logger
-from mne._fiff._digitization import DigPoint
-from mne.channels import make_standard_montage
-from mne._fiff.constants import FIFF
-import mne
 import numpy as np
 import math
 
-def check_position_match(montage_pos, data_pos) -> bool:      
-    """Checks if two positions match on all coordinates.
+from mne._fiff._digitization import DigPoint
+from mne.channels import make_standard_montage
+from mne._fiff.constants import FIFF
 
-    Returns
-    -------
-    bool 
-    """      
+from pyeeg.utils.constants import NON_STANDARD_CHANNEL_TYPES, MNE_DEFAULT_MONTAGES, INVALID_POS_SCORE
+from pyeeg.utils.logger import logger
+
+def check_position_match(montage_pos, data_pos) -> bool:      
+    """
+    Checks if electrode positions of montage and data match on x, y, z.
+
+    Args:
+        montage_pos (array-like) shape (1, 3): Electrode position of montage.
+        data_pos (array-like) shape (1, 3): Electrode position of data.
+
+    Returns:
+        position_match (bool)
+    """             
     if any(np.isnan(data_pos)):
             logger.info(f'Channel position coordinates include a NAN value {data_pos}')    
             return False
@@ -29,12 +34,16 @@ def check_position_match(montage_pos, data_pos) -> bool:
         return position_match
     
 def check_pos_distance(montage_pos, data_pos) -> float:        
-    """Get position difference between montage electrode and data electrode positions.
-
-    Returns
-    -------
-    float: distance between two vectors
     """
+    Get distance between montage and data electrode positions.
+
+    Args:
+        montage_pos (array-like) shape (1, 3): Electrode position of montage.
+        data_pos (array-like) shape (1, 3): Electrode position of data.
+
+    Returns:
+        (float): Cartesian distance between two coordinates of shape (1, 3)
+    """     
     if any(np.isnan(data_pos)):
         logger.info(f'Channel position coordinates include a NAN value {data_pos}')    
         return np.nan
@@ -45,12 +54,15 @@ def check_pos_distance(montage_pos, data_pos) -> float:
         return np.nan
     
 
-def get_chanlocs(data_info):    
-    """ Extract only EEG channel names and locations.
+def get_chanlocs(data_info) -> dict | None:    
+    """
+    Extract EEG channel names and locations only if they are EEG channel types.
 
-    Returns
-    -------
-    dict: {channel names:  location}
+    Args:
+        data_info (mne.raw.info) shape (1, 3): MNE raw data info object        
+
+    Returns:
+       data_chan_info (dict): Dictionary of channel name and position mapping.
     """
     if "chs" not in data_info:
         logger.error(f"data.info does not have ''chs'' key")
@@ -64,11 +76,29 @@ def get_chanlocs(data_info):
     return data_chan_info 
 
 def adjust_chan_kind(data_info):
+    """
+    Add/Modify the type of channels with no standard correspondance in standard montages. 
+
+    Args:
+        data_info (mne.raw.info) shape (1, 3): MNE raw data info object        
+
+    Returns:
+       data_info (ne.raw.info): 
+    """    
     data_info = adjust_nonstd_chans(data_info)
     data_info = adjust_nonstd_chans_dig(data_info)
     return data_info
 
 def adjust_nonstd_chans(data_info):
+    """
+    Modify the type of channels with no standard correspondance in standard montages. 
+
+    Args:
+        data_info (mne.raw.info) shape (1, 3): MNE raw data info object        
+
+    Returns:
+       data_info (ne.raw.info): 
+    """      
     indx = 0
     for dchan in data_info['chs']:
         if dchan['ch_name'] in NON_STANDARD_CHANNEL_TYPES:
@@ -77,11 +107,15 @@ def adjust_nonstd_chans(data_info):
     return data_info
 
 def adjust_nonstd_chans_dig(data_info):
-     # adjusted nonstd channels 
-     # find in dig by locations
-     # change electrode kind
+    """
+    Add/Modify the type of channels with no standard correspondance in standard montages. 
 
-     # if chan does not exist in dig, add the chan
+    Args:
+        data_info (mne.raw.info) shape (1, 3): MNE raw data info object        
+
+    Returns:
+       data_info (ne.raw.info): 
+    """  
     for cchan in data_info['chs']:
         if cchan['ch_name'] in NON_STANDARD_CHANNEL_TYPES:
             digindx = -1
@@ -104,12 +138,15 @@ def get_cardinal_chan_count(data_info) -> int:
         return count
 
 def create_position_dict(data_chan_info) -> dict:
-    """Initializes a position dict 
-    :param data_chan_info: mne.raw.info instance (info of your raw_data)
-    Returns
-    -------
-    dict
-    """ 
+    """
+    Initialize a dictionary for all standard montages to store their overlaps with the data.
+
+    Args:
+        data_chan_info (dict): Dictionary of channel name and position mapping.    
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.
+    """      
     loc_position_dict = {}      
     for montage_name in MNE_DEFAULT_MONTAGES:
            
@@ -125,6 +162,16 @@ def create_position_dict(data_chan_info) -> dict:
 
 
 def position_pipeline(data_chan_info, position_method="position") -> dict:
+    """
+    Runs a electrode matching algorithm based on channel position or names.
+
+    Args:
+        data_chan_info (dict): Dictionary of channel name and position mapping.    
+        position_method (str): Channel matching method ('channel_name' or 'position')
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.
+    """       
     loc_position_dict = create_position_dict(data_chan_info) 
     for montage_name in MNE_DEFAULT_MONTAGES:
         if position_method == "position":
@@ -137,6 +184,16 @@ def position_pipeline(data_chan_info, position_method="position") -> dict:
     return loc_position_dict
     
 def name_matching_position(data_chan_info, montage_name, loc_position_dict) -> dict:
+    """
+    Runs a electrode matching algorithm based on channel names.
+
+    Args:
+        data_chan_info (dict): Dictionary of channel name and position mapping.    
+        montage_name (str): Name of the montage used for matching.
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.
+    """     
     montage = make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()    
     for ch_name, pos_val in data_chan_info.items():          
@@ -161,6 +218,16 @@ def name_matching_position(data_chan_info, montage_name, loc_position_dict) -> d
     return loc_position_dict
 
 def position_matching_position(data_chan_info, montage_name, loc_position_dict) -> dict:
+    """
+    Runs a electrode matching algorithm based on channel positions.
+
+    Args:
+        data_chan_info (dict): Dictionary of channel name and position mapping.    
+        montage_name (str): Name of the montage used for matching.
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.
+    """       
     montage = make_standard_montage(montage_name)    
     mchpos = montage._get_ch_pos()        
     mchnames = list(mchpos.keys())
@@ -191,7 +258,16 @@ def position_matching_position(data_chan_info, montage_name, loc_position_dict) 
     # print(f"\n{montage_name}:\n{loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
     return loc_position_dict
 
-def get_scoreboard(loc_position_dict) -> list:
+def get_scoreboard(loc_position_dict) -> list | bool:
+    """
+    Runs a electrode matching algorithm based on channel names.
+
+    Args:
+        loc_position_dict (dict): Dictionary storing each montage's overlap with data.       
+
+    Returns:
+       ordered_key (list): list of montage names sorted (ascending) based on position distances.
+    """       
     score_vector = np.array([])
     key_vector = np.array([])
     for key, val in loc_position_dict.items():
@@ -210,14 +286,24 @@ def get_scoreboard(loc_position_dict) -> list:
 
     return ordered_key
 
-def select_best_montage(loc_position_dict, ordered_key) -> str:
+def select_best_montage(loc_position_dict, ordered_key) -> str | bool:
+    """
+    Input function to select among montages listed by distances.
+
+    Args:
+        loc_position_dict (dict): Dictionary storing each montage's overlap with data.       
+        ordered_key (list): list of montage names sorted (ascending) based on position distances.
+
+    Returns:
+        (str): name of the selected montage.
+    """     
     if ordered_key == False:
         logger.warning(f"Cannot display montage distance values because none of the montages had applicable position values for your data.")
         return False
-    indx = 1
-    for montage_name in ordered_key:
-        print(f"\n({indx}){montage_name}: {loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
-        indx += 1
+    
+    for indx, montage_name in enumerate(ordered_key):
+        print(f"\n({indx+1}){montage_name}: {loc_position_dict[montage_name]['position_score']}, {loc_position_dict[montage_name]['match_info']}")
+        
     print(f"\nType in the number of montage you want to select: ")
     while True:
         montage_index = input()
@@ -243,7 +329,17 @@ def select_best_montage(loc_position_dict, ordered_key) -> str:
     print(f"\n*********")
     return ordered_key[montage_index]
 
-def find_min_matrix(matrix, start_row=0): 
+def find_min_matrix(matrix, start_row=0) -> int | None: 
+    """
+    Selects the montage electrode with the smallest distance.
+
+    Args:
+        matrix (np.ndarray) shape (#data_chan, #montage_chan): Matrix of electrode distance values 
+        start_row (list): index of data channel to start search from 
+
+    Returns:
+       min_col (int): index of montage channel with lowest distance score.
+    """         
     min_col = np.argmin(matrix[start_row, :])
     same_min_cols = np.where(matrix[start_row, :]==matrix[start_row, min_col])[0]
     if len(same_min_cols) > 1:
@@ -259,32 +355,59 @@ def find_min_matrix(matrix, start_row=0):
             if start_row == min_row:
                 return min_col
             
-def get_matched_chan_ratio(position_dict, montage_name):
-    dupvals, dupkeys = resolve_duplicates(position_dict, montage_name)
-    match_count = len(position_dict[montage_name]['chan_names']) - len(dupkeys)
-    position_dict[montage_name]['match_count'] = match_count
-    position_dict[montage_name]['match_info'] = f"{match_count}/{len(position_dict[montage_name]['chan_names'])}"
-    return position_dict
+def get_matched_chan_ratio(loc_position_dict, montage_name) -> dict:
+    """
+    Registers number of matched channels and ratio to number of data channels
 
-def remove_unmatched_chans(position_dict, montage_name):
-    dupvals, dupkeys = resolve_duplicates(position_dict, montage_name)
+    Args:
+        loc_position_dict (dict): Dictionary storing each montage's overlap with data.       
+        montage_name (str): Name of the montage used for matching.
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.   
+    """       
+    dupvals, dupkeys = resolve_duplicates(loc_position_dict, montage_name)
+    match_count = len(loc_position_dict[montage_name]['chan_names']) - len(dupkeys)
+    loc_position_dict[montage_name]['match_count'] = match_count
+    loc_position_dict[montage_name]['match_info'] = f"{match_count}/{len(loc_position_dict[montage_name]['chan_names'])}"
+    return loc_position_dict
+
+def remove_unmatched_chans(loc_position_dict, montage_name) -> dict:
+    """
+    Removes channels with no position or name match. 
+
+    Args:
+        loc_position_dict (dict): Dictionary storing each montage's overlap with data.       
+        montage_name (str): Name of the montage used for matching.
+
+    Returns:
+       loc_position_dict (dict): Dictionary storing each montage's overlap with data.   
+    """        
+    dupvals, dupkeys = resolve_duplicates(loc_position_dict, montage_name)
     for key in dupkeys:
-        del position_dict[montage_name][key]
+        del loc_position_dict[montage_name][key]
+    return loc_position_dict
 
-def resolve_duplicates(position_dict, montage_name):
+def resolve_duplicates(loc_position_dict, montage_name):
     vec = []
-    for key, val in position_dict[montage_name]['chan_names'].items(): 
+    for key, val in loc_position_dict[montage_name]['chan_names'].items(): 
         vec.append(val)
     return find_duplicates(vec)
 
-def find_duplicates(array):
-    s = set()
+def find_duplicates(array) -> tuple[str, str]:
+    """
+    Finds duplicate elements in array
 
+    Args:
+        array (list):        
+
+    Returns:
+       dup (list), dupindx (list): List of duplicate elements and their index. 
+    """        
+    s = set()
     dup = []
-    dupindx = []
-    indx = 0
-    for n in array:
-        indx += 1
+    dupindx = []    
+    for indx, n in enumerate(array):        
         if n in s:
             dup.append(n)
             dupindx.append(indx)
