@@ -15,7 +15,6 @@ def create_epoch_dict(time_window=DEFAULT_SEGMENTATION_WINDOW) -> dict:
     Returns:
         epoch_dict (dict)
     """    
-    logger.critical("I'm here bitch")
     epoch_dict = {}
     epoch_dict['metadata'] = []
     epoch_dict['events'] = []

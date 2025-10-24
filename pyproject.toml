@@ -3,9 +3,9 @@ requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyeeg"
+name = "mne-helper"
 version = "0.1.0"
-description = "EEG data processing pipeline"
+description = "EEG data processing and visualization tool"
 readme = "README.md"
 requires-python = ">=3.8"
 keywords = ["eeg", "signal-processing", "machine-learning", "neuroscience"]

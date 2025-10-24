@@ -1,7 +1,6 @@
 from mne import viz as v
 
 
-
 def plot_raw(raw_data):
     return v.plot_raw(raw_data, 
                events=None, 
