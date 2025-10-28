@@ -31,6 +31,17 @@ def get_psd_data(spect_data, freq_range=[0, np.inf]) -> typing.Tuple[np.ndarray,
         raise ValueError(f"Frequency argument can have minimum of 1 element and maximum of 2 elements: {freq_range}")
 
 def fft_on_epochs(data, sampling_freq=None):  
+    """
+    Estimates the magnitude of the spectrum of epoched data
+
+    Args:
+        data (np.ndarray) shape (epochs, channels, times)
+        sampling_freq (int): srate of data 
+
+    Returns:
+        fft_mag (np.ndarray) shape(epochs, channels, frequencies)
+        freqs_positive (np.ndarray) shape(1, frequencies)
+    """      
     data_shape = list(np.shape(data))
     if sampling_freq is None:
         logger.error("Please enter a valid sampling frequency")
