@@ -101,15 +101,13 @@ def select_event(epoch_dict) -> dict:
         if selected_index.isnumeric():
             indices = []
             for chi in selected_index:
-                indices.append(int(chi) - 1) # subtract 1 for py indexing            
-            
+                indices.append(int(chi) - 1) # subtract 1 for py indexing
             if max(indices) >= len(event_keys):
                 print(f"\nPlease select events between 1 and {len(event_keys)}")            
             elif min(indices) < 0:
                 print(f"\nPlease select a number 1 or above")
             else: 
-                break           
-            
+                break                       
         elif selected_index == 'e':
             print("Selection cancelled...")
             return False
@@ -117,12 +115,13 @@ def select_event(epoch_dict) -> dict:
             print(f"\nPlease type in a number, not a string: {selected_index}")
 
     selected_events = {}
+    
     print("\n*********")
     print("Selected events:")
     for i in indices:
         selected_events[event_keys[i]] = epoch_dict['event_id'][event_keys[i]]
         print(event_keys[i])       
-    print("*********")
+    print("*********")    
     
     epoch_dict['selected_events'] = selected_events
     return epoch_dict
