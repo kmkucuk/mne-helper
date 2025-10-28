@@ -5,18 +5,20 @@ from pyeeg.io.loader import read_raw_data
 from pyeeg.io.writers import write_metadata
 from pyeeg.io.getdir import fetch_sample_file
 
-from pyeeg.preprocess.segmentation import create_epoch_dict, get_meta_data, select_event, segment_data_markers, plot_segmented_data
+from pyeeg.preprocess.segmentation import create_epoch_dict, get_meta_data, select_event, segment_data_markers, plot_segmented_data, segment_data_continuous
 
 SAMPLE_FILE = 'BRAINVISION'
 
-sample_file = fetch_sample_file('BRAINVISION')
+sample_file = fetch_sample_file(SAMPLE_FILE)
 raw_data = read_raw_data(sample_file)
 raw_data.filter(l_freq=0.1, h_freq=40)
 epoch_dict = create_epoch_dict()
 epoch_dict = get_meta_data(raw_data, epoch_dict)
 epoch_dict = select_event(epoch_dict)
 epochs = segment_data_markers(raw_data, epoch_dict)
+epoch_continuous = segment_data_continuous(raw_data, epoch_duration=1)
 fig = plot_segmented_data(epochs, epoch_dict)
+
 
 if SAMPLE_FILE == 'BRAINVISION':
     freq_avg = epochs['Stimulus/Frequent'].average()

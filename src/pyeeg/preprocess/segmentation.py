@@ -1,9 +1,8 @@
 import mne
 import numpy as np
-import logging
 
 from pyeeg.utils.logger import logger
-from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW
+from pyeeg.utils.constants import DEFAULT_SEGMENTATION_WINDOW, DEFAULT_REJECT_VALUES
 
 def create_epoch_dict(time_window=DEFAULT_SEGMENTATION_WINDOW) -> dict:
     """
@@ -110,6 +109,7 @@ def select_event(epoch_dict) -> dict:
                 print(f"\nPlease select a number 1 or above")
             else: 
                 break           
+            
         elif selected_index == 'e':
             print("Selection cancelled...")
             return False
@@ -163,6 +163,30 @@ def plot_segmented_data(epochs, epoch_dict):
         logger.error("'epochs' is not a mne.epochs.Epochs instance.")
         raise TypeError("'epochs' is not a mne.epochs.Epochs instance.")
 
-def segment_data_continuous(raw_data, epoch_dict):
-    pass
+def segment_data_continuous(raw_data, id=1, epoch_duration=1.0, overlap=0.0, reject=DEFAULT_REJECT_VALUES):
+    """
+    Creates epochs from continuous data
 
+    Args:
+        raw_data (mne.raw): mne raw data object
+        epoch_duration (float): duration of each epoch in seconds
+        overlap (float): The overlap between epochs, in seconds. Must be
+        ``0 <= overlap < duration``. Default is 0, i.e., no overlap.
+
+    Returns:
+        epochs (mne.epoch.Epochs): epochs object
+    """       
+    events = mne.make_fixed_length_events(raw_data, id=id, duration=epoch_duration, overlap=overlap)
+    delta = 1.0 / raw_data.info["sfreq"]    
+    
+    return mne.Epochs(
+        raw_data,
+        events,
+        event_id=[id],
+        tmin=0,
+        tmax=epoch_duration - delta,
+        baseline=None,
+        preload=True,
+        reject_by_annotation=True,
+        reject=reject
+    )    
