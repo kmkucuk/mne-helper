@@ -4,6 +4,7 @@ import scipy
 import typing
 import scipy.fftpack
 
+
 from pyeeg.utils.logger import logger
 
 def get_psd_data(spect_data, freq_range=[0, np.inf]) -> typing.Tuple[np.ndarray, np.ndarray]:
@@ -46,9 +47,9 @@ def fft_on_epochs(data, sampling_freq=None):
     if sampling_freq is None:
         logger.error("Please enter a valid sampling frequency")
         raise ValueError("Please enter a valid sampling frequency: fft_on_epochs(data, sampling_freq=int)")
-    elif len(data_shape) != 3:
-        logger.error("Data should be in 3d (epochs, channels, time)")
-        raise ValueError("Data should be in 3d (epochs, channels, time)")
+    elif len(data_shape) != 3 or isinstance(data, np.ndarray):
+        logger.error("Data should be a numpy.ndarray in 3d (epochs, channels, time)")
+        raise ValueError("Data should be a numpy.ndarray in 3d (epochs, channels, time)")
     else:
         N = data_shape[-1]
         fft_result = scipy.fftpack.fftn(data)    
