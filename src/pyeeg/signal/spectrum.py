@@ -1,9 +1,8 @@
-import numpy as np
 import mne
 import scipy
 import typing
 import scipy.fftpack
-
+import numpy as np
 
 from pyeeg.utils.logger import logger
 
@@ -57,6 +56,9 @@ def fft_on_epochs(data, sampling_freq=None):
         fft_positive = fft_result[:, :, 0:N//2]
         freqs_positive = freqs[:, 0:N//2]
         fft_mag = np.abs(fft_positive) / N
+        # selective *2 because index 0 = DC and index -1 is nyquist in even length
+        # DC and nyquist have average power of the spectrum, multiplication falsely 
+        # increases power
         if N % 2 == 0:
             fft_mag[:, :, 1:-1] *= 2.0
         else:
@@ -64,6 +66,7 @@ def fft_on_epochs(data, sampling_freq=None):
         return fft_mag, freqs_positive
 
 def stft_on_epochs(data):
+    """This may be deleted in future"""
     data_shape = list(np.shape(data))
 
     if len(data_shape) != 3:
@@ -73,8 +76,9 @@ def stft_on_epochs(data):
         logger.error(f"Length of time dimension should be even, instead: {data_shape[2]}")
         raise ValueError(f"Length of time dimension should be even, instead: {data_shape[2]}")
     else:
-        fft_shape = tuple([data_shape[0], data_shape[1], int(data_shape[-1]/2)])
+        fft_shape = tuple([data_shape[0], data_shape[1], int(data_shape[-1]//2)])
         stft_data = np.zeros(fft_shape)    
         for epi in range(0, data_shape[0]):
             stft_data[epi, :, :] = mne.time_frequency.stft(data)    
         return stft_data
+    
