@@ -24,7 +24,7 @@ pre-commit install
 src/pyeeg/
   config/           # configuration management
   io/               # loaders/writers for EEG data
-  preprocess/       # EEG montage, segmentation
+  preprocess/       # EEG auto-montage selection, segmentation
   signal/           # time-frequency decomposition
 scripts/            # CLI helpers for common tasks
 tests/              # unit tests mirroring modules
