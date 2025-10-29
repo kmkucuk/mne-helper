@@ -31,30 +31,6 @@ tests/              # unit tests mirroring modules
 data/               # raw/interim/processed/external (gitignored)
 ```
 
-## Quickstart
-
-- Download data:
-```bash
-python scripts/download_data.py
-```
-
-- Preprocess and extract features:
-```bash
-python scripts/run_preprocess.py
-python scripts/extract_features.py
-```
-
-- Train and evaluate a model:
-```bash
-python scripts/train_model.py
-python scripts/evaluate_model.py
-```
-
-## Testing
-
-```bash
-pytest
-```
 
 ## License
 
