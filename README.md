@@ -26,6 +26,7 @@ src/pyeeg/
   io/               # loaders/writers for EEG data
   preprocess/       # EEG auto-montage selection, segmentation
   signal/           # time-frequency decomposition
+  modeling/         # Bayesian & ANN classification of EEG features (coming soon)
 scripts/            # CLI helpers for common tasks
 tests/              # unit tests mirroring modules
 data/               # raw/interim/processed/external (gitignored)
