@@ -24,11 +24,8 @@ pre-commit install
 src/pyeeg/
   config/           # configuration management
   io/               # loaders/writers for EEG data
-  preprocess/       # filtering, re-referencing, artifact handling
-  features/         # temporal, spectral, spatial features
-  models/           # training, inference, evaluation
-  visualization/    # plotting utilities
-  pipeline/         # orchestration scripts and steps
+  preprocess/       # EEG montage, segmentation
+  signal/           # time-frequency decomposition
 scripts/            # CLI helpers for common tasks
 tests/              # unit tests mirroring modules
 data/               # raw/interim/processed/external (gitignored)
