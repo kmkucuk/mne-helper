@@ -38,8 +38,8 @@ def cwt_on_epochs(epoch_data, wavelet_parameters=DEFAULT_WAVELET_PARAMETERS):
     
     tmp_data = epoch_data._get_data().copy()
 
-    cwtmatr, freqs = pywt.cwt(chirp, scale, wavelet_parameters['wavelet'], sampling_period=1/srate)
-
+    # TODO: Flatten or loop over dimensions of epoched EEG DATA before wavelet convolution
+    cwtmatr, freqs = pywt.cwt(tmp_data, scale, wavelet_parameters['wavelet'], sampling_period=1/srate)
 
 def create_wavelet_w_cycles(freq_range=None, 
                             cycle_range=None,
@@ -47,7 +47,7 @@ def create_wavelet_w_cycles(freq_range=None,
                             freq_steps='lin', 
                             cycle_steps='log',
                             return_wavefun=False) -> typing.Dict:
-    """NOT USED AT THE MOMENT 29.10.2025"""
+    """DEPRECATED AT 29.10.2025 // WAITING FOR USE IN FUTURE"""
     if freq_range is None:
         logger.error("Frequency range was not entered")
         raise ValueError("Please enter a center frequency (i.e. 4) or a range of frequncies (i.e. [4, 10])")
