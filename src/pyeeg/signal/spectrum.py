@@ -21,7 +21,7 @@ def get_psd_data(spect_data, freq_range=[0, np.inf]) -> typing.Tuple[np.ndarray,
     if len(freq_range) == 1:
         return spect_data.get_data(fmin=freq_range, fmax=freq_range, return_freqs=True) 
     elif len(freq_range) == 2:
-        if freq_range[0] >= freq_range[1]:
+        if freq_range[0] <= freq_range[1]:
             return spect_data.get_data(fmin=freq_range[0], fmax=freq_range[1], return_freqs=True) 
         else:
             logger.error(f"First frequency should be lower or equal to the second frequency: {freq_range}")
