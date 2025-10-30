@@ -18,7 +18,7 @@ def get_psd_data(spect_data, freq_range=[0, np.inf]) -> typing.Tuple[np.ndarray,
         data (np.ndarray) shape(epochs, channels, frequencies)
         frequencies (np.ndarray) shape(1, frequencies)
     """        
-    if len(freq_range) == 1:
+    if isinstance(freq_range, float or int):
         return spect_data.get_data(fmin=freq_range, fmax=freq_range, return_freqs=True) 
     elif len(freq_range) == 2:
         if freq_range[0] <= freq_range[1]:
