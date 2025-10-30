@@ -46,7 +46,7 @@ def fft_on_epochs(data, sampling_freq=None):
     if sampling_freq is None:
         logger.error("Please enter a valid sampling frequency")
         raise ValueError("Please enter a valid sampling frequency: fft_on_epochs(data, sampling_freq=int)")
-    elif len(data_shape) != 3 or isinstance(data, np.ndarray):
+    elif len(data_shape) != 3 or (not isinstance(data, np.ndarray)):
         logger.error("Data should be a numpy.ndarray in 3d (epochs, channels, time)")
         raise ValueError("Data should be a numpy.ndarray in 3d (epochs, channels, time)")
     else:
@@ -57,7 +57,7 @@ def fft_on_epochs(data, sampling_freq=None):
         freqs_positive = freqs[:, 0:N//2]
         fft_mag = np.abs(fft_positive) / N
         # selective *2 because index 0 = DC and index -1 is nyquist in even length
-        # DC and nyquist have average power of the spectrum, multiplication falsely 
+        # DC and nyquist have average power of the spectrum, *2 is erroneously
         # increases power
         if N % 2 == 0:
             fft_mag[:, :, 1:-1] *= 2.0
